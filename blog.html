@@ -23,13 +23,11 @@
 
 <p>What is the benefit of having <code>await</code> feature not work like a function?</p>
 
-<p>The benefit is this: when a user decides to switch to a new version of the language with the <code>await</code> feature, dependending on implementation, two possible things will happen with their old code:</p>
+<p>The benefit is this: when a user decides to switch to a new version of the language with the <code>await</code> feature, given appropriate language specification and implementation, it's possible to keep old user's code working without any changes. Because language features don't look like function calls, it's possible to have differentiate between the two. One can think of language keywords and function names living  in separate namespaces.</p>
 
-<p>1) the language implementation will reject the old code (<code>await(foo)</code>), precisely because your new syntax doesn't look like functions, forcing the user to rename their old function;</p>
+<p>At the very least, user's old code will be rejected by the language  implementation, forcing the user to pick a new name for a function.</p>
 
-<p>2) or, the langauge implementation will detect that new langauge syntax is orthogonal to function calls and pass the old code through, not changing the meaning of user's program.</p>
-
-<p>But, if usage of <code>await</code> looked like a regular function call, user's code will suddenly be riddled with mysterious bugs.</p>
+<p>But if usage of <code>await</code> looked like a regular function call, user's code might suddenly be riddled with mysterious bugs.</p>
 
 <p>So, to prevent breakage, consider making your language's features look syntactically different from regular functions.</p>
 
