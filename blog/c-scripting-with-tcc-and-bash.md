@@ -9,12 +9,10 @@
 
 # C scripting with TCC and Bash
 
-How to know what's the value of the constant `INT_MAX` in the C header `<limits.h>`? There are many ways. However, here's how I like to do it: by running a script in C. Here's how:
+How to know what's the value of the constant `INT_MAX` in the C header `<limits.h>`? There are many ways. However, here's how I like to do it: by running a script in C. Here it is:
 
 	$ tcc -run <(printf '%s\n' '#include <'{stdio,limits}'.h>' 'int main() { printf("%u\n", INT_MAX); }')
 	2147483647
-
-</div>
 
 Now that you've seen this, let's take this command line apart, going from the left to the right.
 
@@ -30,8 +28,6 @@ The script can accept other arguments as well. Here's an example where arguments
 
 	$ tcc -run <(printf '%s\n' '#include <'{stdio,stdlib}'.h>' 'int main(int argc, char **argv) { printf("%d\n", atoi(argv[1]) + atoi(argv[2])); }') 23 34
 	57
-
-</div>
 
 ## `<(...)`
 

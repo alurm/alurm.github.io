@@ -7,11 +7,10 @@
     pre { overflow: scroll; border: 1px solid black; }
 </style>
 <h1>C scripting with TCC and Bash</h1>
-<p>How to know what's the value of the constant <code>INT_MAX</code> in the C header <code>&lt;limits.h&gt;</code>? There are many ways. However, here's how I like to do it: by running a script in C. Here's how:</p>
+<p>How to know what's the value of the constant <code>INT_MAX</code> in the C header <code>&lt;limits.h&gt;</code>? There are many ways. However, here's how I like to do it: by running a script in C. Here it is:</p>
 <pre><code>$ tcc -run &lt;(printf '%s\n' '#include &lt;'{stdio,limits}'.h&gt;' 'int main() { printf(&quot;%u\n&quot;, INT_MAX); }')
 2147483647
 </code></pre>
-</div>
 <p>Now that you've seen this, let's take this command line apart, going from the left to the right.</p>
 <h2><code>tcc</code></h2>
 <p>This part is easy, <a href="https://bellard.org/tcc/">TCC</a> (the &quot;Tiny C Compiler&quot;) is a C compiler.</p>
@@ -21,7 +20,6 @@
 <pre><code>$ tcc -run &lt;(printf '%s\n' '#include &lt;'{stdio,stdlib}'.h&gt;' 'int main(int argc, char **argv) { printf(&quot;%d\n&quot;, atoi(argv[1]) + atoi(argv[2])); }') 23 34
 57
 </code></pre>
-</div>
 <h2><code>&lt;(...)</code></h2>
 <p>This feature of Bash is called <a href="https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html"><em>process substitution</em></a>. In this case, it allows output of the command inside the parenthesis to be available using a filename.</p>
 <p>Here's an example:</p>
