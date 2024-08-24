@@ -1,0 +1,13 @@
+{
+	"manifest_version": 3,
+	"name": "remove-content-disposition",
+	"version": "1",
+	"permissions": [ "webRequest", "webRequestBlocking" ],
+	"host_permissions": [ "<all_urls>" ],
+	"background": { "type": "module", "scripts": [ "worker.js" ] },
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{56a782ac-d49d-48c0-8c2d-f25ccf24c0ed}"
+		}
+	}
+}

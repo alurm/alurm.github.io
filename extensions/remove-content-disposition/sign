@@ -1,0 +1,7 @@
+#!/bin/sh
+web-ext sign \
+	--channel=unlisted \
+	--api-key "$(cat jwt-issuer)" \
+	--api-secret "$(cat jwt-secret)" \
+	--source-dir extension \
+;
