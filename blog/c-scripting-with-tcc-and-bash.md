@@ -7,6 +7,8 @@
 	pre { overflow: scroll; border: 1px solid black; }
 </style>
 
+<title>C scripting with TCC and Bash</title>
+
 # C scripting with TCC and Bash
 
 How to know what's the value of the constant `INT_MAX` in the C header `<limits.h>`? There are many ways. However, here's how I like to do it: by running a script in C. Here it is:

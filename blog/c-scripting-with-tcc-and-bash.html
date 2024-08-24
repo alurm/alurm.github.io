@@ -6,6 +6,7 @@
     body { margin: 0 auto; max-width: 50em; }
     pre { overflow: scroll; border: 1px solid black; }
 </style>
+<title>C scripting with TCC and Bash</title>
 <h1>C scripting with TCC and Bash</h1>
 <p>How to know what's the value of the constant <code>INT_MAX</code> in the C header <code>&lt;limits.h&gt;</code>? There are many ways. However, here's how I like to do it: by running a script in C. Here it is:</p>
 <pre><code>$ tcc -run &lt;(printf '%s\n' '#include &lt;'{stdio,limits}'.h&gt;' 'int main() { printf(&quot;%u\n&quot;, INT_MAX); }')
