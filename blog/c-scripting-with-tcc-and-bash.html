@@ -6,75 +6,130 @@
     body { margin: 0 auto; max-width: 50em; }
     pre { overflow: scroll; border: 1px solid black; }
 </style>
-<title>C scripting with TCC and Bash</title>
-<h1>C scripting with TCC and Bash</h1>
-<p>How to know what's the value of the constant <code>INT_MAX</code> in the C header <code>&lt;limits.h&gt;</code>? There are many ways. However, here's how I like to do it: by running a script in C. Here it is:</p>
-<pre><code>$ tcc -run &lt;(printf '%s\n' '#include &lt;'{stdio,limits}'.h&gt;' 'int main() { printf(&quot;%u\n&quot;, INT_MAX); }')
-2147483647
-</code></pre>
-<p>Now that you've seen this, let's take this command line apart, going from the left to the right.</p>
-<h2><code>tcc</code></h2>
-<p>This part is easy, <a href="https://bellard.org/tcc/">TCC</a> (the &quot;Tiny C Compiler&quot;) is a C compiler.</p>
-<h2><code>-run</code></h2>
-<p>This flag allows TCC to run C programs without creating intermediate files, which is useful for a throwaway script like ours.</p>
-<p>The script can accept other arguments as well. Here's an example where arguments <code>23</code> and <code>34</code> are passed to the C program. with the output being the string <code>57</code>:</p>
-<pre><code>$ tcc -run &lt;(printf '%s\n' '#include &lt;'{stdio,stdlib}'.h&gt;' 'int main(int argc, char **argv) { printf(&quot;%d\n&quot;, atoi(argv[1]) + atoi(argv[2])); }') 23 34
-57
-</code></pre>
-<h2><code>&lt;(...)</code></h2>
-<p>This feature of Bash is called <a href="https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html"><em>process substitution</em></a>. In this case, it allows output of the command inside the parenthesis to be available using a filename.</p>
-<p>Here's an example:</p>
+<title>
+C scripting with TCC and Bash
+</title>
+<h1 id="c-scripting-with-tcc-and-bash">C scripting with TCC and
+Bash</h1>
+<p>How to know what’s the value of the constant <code>INT_MAX</code> in
+the C header <code>&lt;limits.h&gt;</code>? There are many ways.
+However, here’s how I like to do it: by running a script in C. Here it
+is:</p>
+<pre><code>$ tcc -run &lt;(printf &#39;%s\n&#39; &#39;#include &lt;&#39;{stdio,limits}&#39;.h&gt;&#39; &#39;int main() { printf(&quot;%u\n&quot;, INT_MAX); }&#39;)
+2147483647</code></pre>
+<p>Now that you’ve seen this, let’s take this command line apart, going
+from the left to the right.</p>
+<h2 id="tcc"><code>tcc</code></h2>
+<p>This part is easy, <a href="https://bellard.org/tcc/">TCC</a> (the
+“Tiny C Compiler”) is a C compiler.</p>
+<h2 id="run"><code>-run</code></h2>
+<p>This flag allows TCC to run C programs without creating intermediate
+files, which is useful for a throwaway script like ours.</p>
+<p>The script can accept other arguments as well. Here’s an example
+where arguments <code>23</code> and <code>34</code> are passed to the C
+program. with the output being the string <code>57</code>:</p>
+<pre><code>$ tcc -run &lt;(printf &#39;%s\n&#39; &#39;#include &lt;&#39;{stdio,stdlib}&#39;.h&gt;&#39; &#39;int main(int argc, char **argv) { printf(&quot;%d\n&quot;, atoi(argv[1]) + atoi(argv[2])); }&#39;) 23 34
+57</code></pre>
+<h2 id="section"><code>&lt;(...)</code></h2>
+<p>This feature of Bash is called <a
+href="https://www.gnu.org/software/bash/manual/html_node/Process-Substitution.html"><em>process
+substitution</em></a>. In this case, it allows output of the command
+inside the parenthesis to be available using a filename.</p>
+<p>Here’s an example:</p>
 <pre><code>$ echo &lt;(echo hello)
 /dev/fd/63
 
 $ cat &lt;(echo hello)
-hello
-</code></pre>
-<p>As we can see from <code>echo &lt;(echo hello)</code>, from the perspective of the receiving command process substitution expression gets replaced by the string <code>/dev/fd/N</code> where <code>N</code> is the number of the descriptor Bash opened to capture the output of <code>echo hello</code>.</p>
-<p>What's special about <code>/dev/fd/N</code>? This path provides us access to the file descriptor <code>N</code>. In the second example we can see that the file <code>/dev/fd/N</code> can be read by the receiving process to get the standard output of <code>echo hello</code>. <code>cat &lt;(echo hello)</code> prints <code>hello</code>.</p>
-<h2><code>printf '%s\n'</code></h2>
-<p>What's <a href="http://man.openbsd.org/printf"><code>printf</code></a> here? Turns out that <code>printf</code> is not only a name of a function in C, but also of a utility. It allows us to do formatted output (<code>printf</code> allows to <em>print formatted</em>). The first argument is the format string (<code>%s\n</code> instructs to print each argument on a single line), the rest are the arguments to be formatted. Here's an example:</p>
-<pre><code>$ printf 'the argument: %s\n' hello '' world
+hello</code></pre>
+<p>As we can see from <code>echo &lt;(echo hello)</code>, from the
+perspective of the receiving command process substitution expression
+gets replaced by the string <code>/dev/fd/N</code> where <code>N</code>
+is the number of the descriptor Bash opened to capture the output of
+<code>echo hello</code>.</p>
+<p>What’s special about <code>/dev/fd/N</code>? This path provides us
+access to the file descriptor <code>N</code>. In the second example we
+can see that the file <code>/dev/fd/N</code> can be read by the
+receiving process to get the standard output of <code>echo hello</code>.
+<code>cat &lt;(echo hello)</code> prints <code>hello</code>.</p>
+<h2 id="printf-sn"><code>printf '%s\n'</code></h2>
+<p>What’s <a
+href="http://man.openbsd.org/printf"><code>printf</code></a> here? Turns
+out that <code>printf</code> is not only a name of a function in C, but
+also of a utility. It allows us to do formatted output
+(<code>printf</code> allows to <em>print formatted</em>). The first
+argument is the format string (<code>%s\n</code> instructs to print each
+argument on a single line), the rest are the arguments to be formatted.
+Here’s an example:</p>
+<pre><code>$ printf &#39;the argument: %s\n&#39; hello &#39;&#39; world
 the argument: hello
 the argument:
-the argument: world
-</code></pre>
-<p>Each of the three arguments (<code>&quot;hello&quot;</code>, <code>&quot;&quot;</code>, and <code>&quot;world&quot;</code>) is printed on a separate line and prefixed by the string <code>&quot;the argument&quot;</code>. Even the empty string.</p>
-<p>Why do we need this here? The answer is <a href="https://en.cppreference.com/w/c/preprocessor">the C preprocessor</a>.</p>
-<p>As we'll see later, in our C code there are two different C headers which we need: <code>stdio.h</code> for the <code>printf</code> C function and <code>limits.h</code> for the definition of the macro <code>INT_MAX</code>. This requires two include directives, and there can't be multiple directives on one line. Which is why we use <code>printf</code> here to specify multiple lines in a single command line, one per argument.</p>
-<h2><code>'#include &lt;'{stdio,limits}'.h&gt;'</code></h2>
-<p>What's interesting here is the <code>{stdio,limits}</code> part. What is it? A yet another feature of Bash called <a href="https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html"><em>brace expansion</em></a>. It allows us to add prefixes and suffixes to multiple strings at once. Here's an example:</p>
-<pre><code>$ printf '%s\n' dir/{a,b,c}.c
+the argument: world</code></pre>
+<p>Each of the three arguments (<code>"hello"</code>, <code>""</code>,
+and <code>"world"</code>) is printed on a separate line and prefixed by
+the string <code>"the argument"</code>. Even the empty string.</p>
+<p>Why do we need this here? The answer is <a
+href="https://en.cppreference.com/w/c/preprocessor">the C
+preprocessor</a>.</p>
+<p>As we’ll see later, in our C code there are two different C headers
+which we need: <code>stdio.h</code> for the <code>printf</code> C
+function and <code>limits.h</code> for the definition of the macro
+<code>INT_MAX</code>. This requires two include directives, and there
+can’t be multiple directives on one line. Which is why we use
+<code>printf</code> here to specify multiple lines in a single command
+line, one per argument.</p>
+<h2
+id="include-stdiolimits.h"><code>'#include &lt;'{stdio,limits}'.h&gt;'</code></h2>
+<p>What’s interesting here is the <code>{stdio,limits}</code> part. What
+is it? A yet another feature of Bash called <a
+href="https://www.gnu.org/software/bash/manual/html_node/Brace-Expansion.html"><em>brace
+expansion</em></a>. It allows us to add prefixes and suffixes to
+multiple strings at once. Here’s an example:</p>
+<pre><code>$ printf &#39;%s\n&#39; dir/{a,b,c}.c
 dir/a.c
 dir/b.c
-dir/c.c
-</code></pre>
-<p>As we can see, strings <code>a,</code> <code>b,</code> and <code>c</code> are prefixed by <code>dir/</code> and suffixed by <code>.c</code>.</p>
-<p>What does <code>'#include &lt;'{stdio,limits}'.h&gt;'</code> do then? That's right, it prefixes strings <code>stdio</code> and <code>limits</code> with the string <code>#include &lt;</code> and suffixes them with the string <code>.h&gt;</code>. To verify this, let's the results of brace expansion on a separate line with <code>printf</code>:</p>
-<pre><code>$ printf '%s\n' '#include &lt;'{stdio,limits.}'.h&gt;'
+dir/c.c</code></pre>
+<p>As we can see, strings <code>a,</code> <code>b,</code> and
+<code>c</code> are prefixed by <code>dir/</code> and suffixed by
+<code>.c</code>.</p>
+<p>What does <code>'#include &lt;'{stdio,limits}'.h&gt;'</code> do then?
+That’s right, it prefixes strings <code>stdio</code> and
+<code>limits</code> with the string <code>#include &lt;</code> and
+suffixes them with the string <code>.h&gt;</code>. To verify this, let’s
+the results of brace expansion on a separate line with
+<code>printf</code>:</p>
+<pre><code>$ printf &#39;%s\n&#39; &#39;#include &lt;&#39;{stdio,limits.}&#39;.h&gt;&#39;
 #include &lt;stdio.h&gt;
-#include &lt;limits.h&gt;
-</code></pre>
-<h2><code>'int main() { printf(&quot;%u\n&quot;, INT_MAX); }'</code></h2>
-<p>This is the meat of the program we want to run, put into single quotes to be presented as a single string to <code>printf</code>.</p>
-<p>Together with the two include directives this forms a complete C program.</p>
+#include &lt;limits.h&gt;</code></pre>
+<h2
+id="int-main-printfun-int_max"><code>'int main() { printf("%u\n", INT_MAX); }'</code></h2>
+<p>This is the meat of the program we want to run, put into single
+quotes to be presented as a single string to <code>printf</code>.</p>
+<p>Together with the two include directives this forms a complete C
+program.</p>
 <p><strong>This is it.</strong></p>
-<p>To summarize, let's see the final program by replacing <code>tcc -run</code> with <code>cat</code>:</p>
-<pre><code>$ cat &lt;(printf '%s\n' '#include &lt;'{stdio,limits}'.h&gt;' 'int main(void) { printf(&quot;%d\n&quot;, INT_MAX); }')
+<p>To summarize, let’s see the final program by replacing
+<code>tcc -run</code> with <code>cat</code>:</p>
+<pre><code>$ cat &lt;(printf &#39;%s\n&#39; &#39;#include &lt;&#39;{stdio,limits}&#39;.h&gt;&#39; &#39;int main(void) { printf(&quot;%d\n&quot;, INT_MAX); }&#39;)
 #include &lt;stdio.h&gt;
 #include &lt;limits.h&gt;
-int main(void) { printf(&quot;%d\n&quot;, INT_MAX); }
-</code></pre>
-<p>This will print the value <code>INT_MAX</code>. This is exactly what we wanted.</p>
-<h2>Postscriptum about Plan 9's rc</h2>
-<p>For <a href="https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs">Plan 9</a> fans out there, here's a way to do the same in the <code>rc</code> shell.</p>
-<p><code>rc</code> has analogues for process substitution and brace expansion, so the command line will be quite similar:</p>
-<pre><code>; tcc -run &lt;{printf '%s\n' '#include &lt;'^(stdio limits)^'.h&gt;' 'int main(void) { printf(&quot;%d\n&quot;, INT_MAX); }'}
-2147483647
-</code></pre>
-<h2>Postscriptum about stdin</h2>
-<p>For programs that don't require reading from the standard input (like the one we have), the command line can be simpler, requiring no process substitution:</p>
-<pre><code>$ printf '%s\n' '#include &lt;'{stdio,limits}'.h&gt;' 'int main() { printf(&quot;%u\n&quot;, INT_MAX); }' | tcc -run -
-2147483647
-</code></pre>
-<p>This makes <code>tcc</code> read the program from the standard input. <code>tcc -run /dev/stdin</code> would also work.</p>
+int main(void) { printf(&quot;%d\n&quot;, INT_MAX); }</code></pre>
+<p>This will print the value <code>INT_MAX</code>. This is exactly what
+we wanted.</p>
+<h2 id="postscriptum-about-plan-9s-rc">Postscriptum about Plan 9’s
+rc</h2>
+<p>For <a
+href="https://en.wikipedia.org/wiki/Plan_9_from_Bell_Labs">Plan 9</a>
+fans out there, here’s a way to do the same in the <code>rc</code>
+shell.</p>
+<p><code>rc</code> has analogues for process substitution and brace
+expansion, so the command line will be quite similar:</p>
+<pre><code>; tcc -run &lt;{printf &#39;%s\n&#39; &#39;#include &lt;&#39;^(stdio limits)^&#39;.h&gt;&#39; &#39;int main(void) { printf(&quot;%d\n&quot;, INT_MAX); }&#39;}
+2147483647</code></pre>
+<h2 id="postscriptum-about-stdin">Postscriptum about stdin</h2>
+<p>For programs that don’t require reading from the standard input (like
+the one we have), the command line can be simpler, requiring no process
+substitution:</p>
+<pre><code>$ printf &#39;%s\n&#39; &#39;#include &lt;&#39;{stdio,limits}&#39;.h&gt;&#39; &#39;int main() { printf(&quot;%u\n&quot;, INT_MAX); }&#39; | tcc -run -
+2147483647</code></pre>
+<p>This makes <code>tcc</code> read the program from the standard input.
+<code>tcc -run /dev/stdin</code> would also work.</p>
