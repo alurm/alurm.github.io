@@ -1,5 +1,3 @@
-<title>Alan Urmancheev, a software engineer</title>
-
 <style>
 	* { font-size: calc(1rem + 0.10vw); }
 	h3 { font-size: calc(1.2rem + 0.15vw); }
@@ -9,9 +7,13 @@
 	pre { overflow: scroll; border: 1px solid black; }
 </style>
 
+<div style="margin-top: 20px"></div>
+
+<title>Alan Urmancheev, a software engineer</title>
+
 # Alan Urmancheev, a software engineer
 
-[Resume](resume/alan-urmancheev-english.pdf) ([in Russian](resume/alan-urmancheev-russian.pdf))
+[Resume](resume/alan-urmancheev.pdf) ([HTML version](resume/alan-urmancheev.html))
 
 ## Contacts
 
@@ -40,6 +42,14 @@
 
 This extension removes the "content-disposition" header from responses, forcing inline view of content. This can be useful with txts, pdfs, and other types of files.
 
-[Source](https://github.com/alurm/alurm.github.io/tree/master/extensions/remove-content-disposition/source)
+[Source code](https://github.com/alurm/alurm.github.io/tree/master/extensions/remove-content-disposition/source)
 
-[Extension](extensions/remove-content-disposition/extension.xpi)
+[Install on Firefox](extensions/remove-content-disposition/extension.xpi)
+
+### Read later shortcut
+
+This extension adds a browser shortcut to add the current tab to the reading list.
+
+By default it is Alt+Shift+D. You can change that in your browser.
+
+[Source code](https://github.com/alurm/browser-read-later-shortcut)
