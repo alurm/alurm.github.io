@@ -44,7 +44,7 @@ Software Engineer
 - A #link("https://github.com/alurm/browser-read-later-shortcut")[browser extension] which adds a shortcut to quickly add a tab to the reading list (JavaScript).
 - A #link("https://github.com/alurm/leetcode-redirector")[utility] to quickly open a LeetCode problem given its number (Python).
 
-Have a technology focused #link("https://t.me/alurman")[Telegram blog], have given talks at various hackerspaces (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2]).
+Have a technology focused #link("https://t.me/alurman")[Telegram blog], have given talks at various hackerspaces (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2], #link("https://youtube.com/watch?v=noEbul27dHE")[3]).
 
 == Open source
 

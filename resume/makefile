@@ -13,11 +13,11 @@ alan-urmancheev-%.pdf : alan-urmancheev-%.html
 alan-urmancheev-%.html : alan-urmancheev-%.md
 	pandoc -i $< -o $@
 
-alan-urmancheev-base.html : alan-urmancheev.typst
+alan-urmancheev-base.html : alan-urmancheev.typ
 	pandoc --from typst --to html $< -o $@
 
 alan-urmancheev.html : header.html alan-urmancheev-base.html
 	cat $^ > $@
 
-alan-urmancheev.pdf : alan-urmancheev.typst
+alan-urmancheev.pdf : alan-urmancheev.typ
 	typst compile $< $@
