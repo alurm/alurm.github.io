@@ -8,8 +8,8 @@ Software Engineer and DevOps
     let contacts = (
         link("https://github.com/alurm")[GitHub],
         link("https://t.me/alurm")[Telegram],
-        link("tel:+37493814725")[Phone],
-        link("mailto:alan.urman@gmail.com")[Email],
+        link("mailto:alan.urman@gmail.com"),
+        [Signal: \@alurm.89],
     );
     grid(columns: contacts.len(), gutter: 5pt, ..contacts)
 }
