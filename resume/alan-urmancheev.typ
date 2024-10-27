@@ -16,7 +16,7 @@ Software Engineer
 
 == Skills
 
-Technologies: Linux, Git, Docker, Nix, SQLite, Makefile, computer networking, systemd.
+Technologies: Linux, Git, Docker, Nix.
 
 Programming languages: C, Bash, Go, C++, Rust.
 
