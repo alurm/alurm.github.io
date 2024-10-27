@@ -1,6 +1,6 @@
 = Alan Urmancheev
 
-Software Engineer and DevOps
+Software Engineer
 
 #show link: underline
 
@@ -9,7 +9,7 @@ Software Engineer and DevOps
         link("https://github.com/alurm")[GitHub],
         link("https://t.me/alurm")[Telegram],
         link("mailto:alan.urman@gmail.com"),
-        [Signal: \@alurm.89],
+        link("https://signal.me/#eu/ZH-viwUBe-3OuVix322oldcqy63d1zCk3Alea4RDRTO00KwKthBN25zt88Ut3isI")[Signal],
     );
     grid(columns: contacts.len(), gutter: 5pt, ..contacts)
 }
@@ -18,7 +18,7 @@ Software Engineer and DevOps
 
 Technologies: Linux, Git, Docker, Nix, SQLite, Makefile, computer networking, systemd.
 
-Programming languages: C, Go, Bash, JavaScript, Python, Rust.
+Programming languages: C, Bash, Go, C++, Rust.
 
 Languages: C1 English, fluent Russian.
 
@@ -37,12 +37,11 @@ Software Engineer
 
 == Personal projects
 
-- A #link("https://github.com/alurm/JSON")[plugin] for the Acme text editor for viewing JSON in (Go).
-- An #link("https://git.sr.ht/~alurm/notlang/tree/main/item/v2/about.txt")[interpreter] for a simple programming language (Go).
+- A #link("https://github.com/alurm/JSON")[plugin] for the Acme text editor for viewing JSON in Go.
+- An #link("https://github.com/alurm/notlang")[interpreter] for a simple shell-like programming language in Go.
 - A #link("https://github.com/alurm/pisciners-faces")[website] to display faces of 42 school students next to their nicknames (Makefile, Bash, Go, Nix).
-- A primitive #link("https://github.com/alurm/rustdns")[DNS server] (Rust).
-- A #link("https://github.com/alurm/browser-read-later-shortcut")[browser extension] which adds a shortcut to quickly add a tab to the reading list (JavaScript).
-- A #link("https://github.com/alurm/leetcode-redirector")[utility] to quickly open a LeetCode problem given its number (Python).
+- A primitive #link("https://github.com/alurm/rustdns")[DNS server] in Rust.
+- A simple #link("https://github.com/alurm/irc")[IRC server] in C++.
 
 Have a technology focused #link("https://t.me/alurman")[Telegram blog], have given talks at various hackerspaces (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2], #link("https://youtube.com/watch?v=noEbul27dHE")[3]).
 
