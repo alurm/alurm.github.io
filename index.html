@@ -5,6 +5,17 @@
     h1 { font-size: calc(1.6rem + 0.25vw); }
     body { margin: 0 auto; max-width: 50em; }
     pre { overflow: scroll; border: 1px solid black; }
+
+    @media(prefers-color-scheme: dark) {
+        body {
+            /* https://m3.material.io/blog/android-dark-theme-tutorial. */
+            background-color: #121212;
+            color: white;
+        }
+        a {
+            color: #00ff00;
+        }
+    }
 </style>
 <div style="margin-top: 20px">
 
