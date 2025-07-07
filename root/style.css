@@ -29,3 +29,9 @@ pre {
     overflow: scroll;
     border: 1px solid light-dark(var(--white), var(--black));
 }
+
+input[type="checkbox"]:not(:checked) + h2 + span {
+    display: none;
+}
+
+h2 { display: inline }

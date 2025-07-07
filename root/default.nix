@@ -12,7 +12,7 @@
           <link rel="stylesheet" href="style.css"/>
         </head>
         <body>
-          $(pandoc -i index.md)
+          $(pandoc -f gfm -i index.md)
         </body>
       </html>
     end
