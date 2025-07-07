@@ -26,7 +26,7 @@ jobs:
           chown -R "$(id -u):$(id -g)" result
           chmod -R a+rx result
       - name: Upload
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
           path: result
 
