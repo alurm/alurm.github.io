@@ -1,6 +1,6 @@
 .DEFAULT_GOAL := default
 
-%.html: %.md
+%.html: %.md style.css
 	pandoc -i $< -o $@
 
 .PHONY: default
