@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../style.css"/>
-
 <title>C scripting with TCC and Bash</title>
 
 # C scripting with TCC and Bash

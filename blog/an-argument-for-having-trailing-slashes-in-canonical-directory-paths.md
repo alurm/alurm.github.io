@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="../style.css"/>
-
 <title>An argument for having trailing slashes in canonical directory paths</title>
 
 # An argument for having trailing slashes in canonical directory paths

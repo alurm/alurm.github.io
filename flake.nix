@@ -12,29 +12,17 @@
     flake-utils.lib.eachDefaultSystem (system: let
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      packages.default = pkgs.stdenv.mkDerivation {
-        name = "alurm.github.io";
-        src = self;
-        
-        nativeBuildInputs = with pkgs; [
-          typst
-          pandoc
-          gnumake
-        ];
-
-        buildPhase = ''
-          make
-        '';
-
-        installPhase = ''
-          cp -r . $out
-        '';
+      packages = rec {
+        default = tree;
+        blog = pkgs.callPackage ./blog {};
+        resume = pkgs.callPackage ./resume {};
+        root = pkgs.callPackage ./root {};
+        tree = pkgs.callPackage ./. {
+          inherit blog resume root;
+        };
       };
       devShells.default = pkgs.mkShell {
-        packages = [
-          pkgs.typst
-          pkgs.pandoc
-        ];
+        inputsFrom = builtins.attrValues self.packages.${system};
       };
     });
 }

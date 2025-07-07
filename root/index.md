@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="style.css"/>
-
 <title>Alan Urmancheev, a software engineer</title>
 
 # Alan Urmancheev, a software engineer
