@@ -1,0 +1,41 @@
+name: Deploy to pages
+on:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+  pages: write
+  # Note: I don't know how this works yet.
+  id-token: write
+
+# Cancel older if newer is started.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@4.2.2
+      - uses: DeterminateSystems/determinate-nix-action@main
+      - run: nix build
+      - name: Adjust permissions
+        run: |
+          chown -R "$(id -u):$(id -g)" result
+          chmod -R a+rx result
+      - name: Upload
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: result
+
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v1

@@ -5,6 +5,12 @@ MAKEFLAGS := --no-builtin-rules
 .PHONY: all
 all: alan-urmancheev.pdf alan-urmancheev.html
 
+.PHONY: clean
+clean:
+	rm -f alan-urmancheev.pdf
+	rm -f alan-urmancheev-base.html
+	rm -f alan-urmancheev.html
+
 # PDF.
 
 alan-urmancheev.pdf: alan-urmancheev.typ
