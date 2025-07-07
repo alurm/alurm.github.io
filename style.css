@@ -1,17 +1,31 @@
+:root {
+    /* For light-dark() to work. */
+    color-scheme: light dark;
+    
+    /* 
+    * For the dark color:
+    * https://m3.material.io/blog/android-dark-theme-tutorial.
+    */
+    --white: #f3f3f3;
+    --black: #121212;
+}
+
 * { font-size: calc(1rem + 0.10vw); }
 h3 { font-size: calc(1.2rem + 0.15vw); }
 h2 { font-size: calc(1.4rem + 0.20vw); }
 h1 { font-size: calc(1.6rem + 0.25vw); }
-body { margin: 2rem }
-pre { overflow: scroll; border: 1px solid light-dark(white, black); }
 
-@media(prefers-color-scheme: dark) {
-    body {
-        /* https://m3.material.io/blog/android-dark-theme-tutorial. */
-        background-color: #121212;
-        color: white;
-    }
-    a {
-        color: #00ff00;
-    }
+body {
+    margin: 2rem;
+    background-color: light-dark(var(--white), var(--black));
+    color: light-dark(var(--black), var(--white));
+}
+
+a {
+    color: light-dark(blue, #00ff00);
+}
+
+pre {
+    overflow: scroll;
+    border: 1px solid light-dark(var(--white), var(--black));
 }
