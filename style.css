@@ -2,7 +2,7 @@
 h3 { font-size: calc(1.2rem + 0.15vw); }
 h2 { font-size: calc(1.4rem + 0.20vw); }
 h1 { font-size: calc(1.6rem + 0.25vw); }
-body { margin: 0 auto; max-width: 50em; }
+body { margin: 2rem }
 pre { overflow: scroll; border: 1px solid black; }
 
 @media(prefers-color-scheme: dark) {
