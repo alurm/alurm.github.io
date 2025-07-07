@@ -21,7 +21,7 @@ body {
     color: light-dark(var(--black), var(--white));
 }
 
-a {
+a:not(:visited) {
     color: light-dark(blue, #00ff00);
 }
 
