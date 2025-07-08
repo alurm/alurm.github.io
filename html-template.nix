@@ -1,13 +1,12 @@
-{stylePath, mdPath}: ''
+{style, post}: ''
   <!doctype html>
   <html>
     <head>
-      <link rel="stylesheet" href="${stylePath}"/>
+      <link rel="stylesheet" href="${style}"/>
       <meta name="viewport" content="width=device-width"/>
     </head>
     <body>
-      $(pandoc -i ${mdPath})
+      $(pandoc ${post})
     </body>
   </html>
 ''
-  

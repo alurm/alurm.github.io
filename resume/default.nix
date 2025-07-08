@@ -9,14 +9,10 @@
     typst compile alan-urmancheev.typ alan-urmancheev.pdf
 
     cat << end > alan-urmancheev.html
-      <html>
-        <head>
-          <link rel="stylesheet" href="../style.css"/>
-        </head>
-        <body>
-          $(pandoc alan-urmancheev.typ)
-        </body>
-      </html>
+      ${import ../html-template.nix {
+        style = "../style.css";
+        post = ./alan-urmancheev.typ;
+      }}
     end
 
     runHook postBuild

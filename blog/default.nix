@@ -7,14 +7,10 @@
     runHook preBuild
     for i in *.md; do
       cat << end > "''${i%.md}.html"
-        <html>
-          <head>
-            <link rel="stylesheet" href="../style.css"/>
-          </head>
-          <body>
-            $(pandoc -i "$i")
-          </body>
-        </html>
+        ${import ../html-template.nix {
+          style = "../style.css";
+          post = "$i";
+        }}
     end
 
     done

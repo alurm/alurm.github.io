@@ -8,8 +8,8 @@
 
     cat << end > index.html
       ${import ../html-template.nix {
-        stylePath = "style.css";
-        mdPath = "index.md";
+        style = "style.css";
+        post = "index.md";
       }}
     end
 
