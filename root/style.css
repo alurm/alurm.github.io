@@ -12,7 +12,7 @@
 }
 
 body {
-    margin: 2rem;
+    margin: 1rem;
     background-color: light-dark(var(--white), var(--black));
     color: light-dark(var(--black), var(--white));
 }
