@@ -20,11 +20,8 @@ jobs:
     steps:
       - uses: actions/checkout@4.2.2
       - uses: DeterminateSystems/determinate-nix-action@main
+      - uses: DeterminateSystems/magic-nix-cache-action@main
       - run: nix build --print-build-logs
-      # - name: Adjust permissions
-      #   run: |
-      #     chown -R "$(id -u):$(id -g)" result
-      #     chmod -R a+rx result
       - name: Upload
         uses: actions/upload-pages-artifact@v3
         with:
