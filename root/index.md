@@ -4,22 +4,12 @@
 
 [Resume](resume/alan-urmancheev.pdf) ([HTML version](resume/alan-urmancheev.html))
 
-<input type="checkbox"/>
-
 ## Contacts
-
-<span>
 
 * [Telegram](https://t.me/alurm)
 * [Mail](mailto:alan.urman@gmail.com)
 
-</span>
-
-<input type="checkbox"/>
-
 ## Places
-
-<span>
 
 * [Twitter](https://twitter.com/alurmanc)
 * [GitHub](https://github.com/alurm)
@@ -30,25 +20,12 @@
 * [Programming school 42's internal profile](https://profile.intra.42.fr/users/ghelman)
 * [A guide to 42 Yerevan programming school](42-yerevan-unofficial-guide/index.html)
 
-</span>
-
-<input type="checkbox"/>
-
 ## Blog
-
-<span>
 
 * [C scripting with TCC and Bash](blog/c-scripting-with-tcc-and-bash.html)
 * [An argument for having trailing slashes in canonical directory paths](blog/an-argument-for-having-trailing-slashes-in-canonical-directory-paths.html)
 
-</span>
-
-<input type="checkbox"/>
-
-
 ## Web extensions
-
-<span>
 
 ### Remove content disposition
 
@@ -65,5 +42,3 @@ This extension adds a browser shortcut to add the current tab to the reading lis
 By default it is Alt+Shift+D. You can change that in your browser.
 
 [Source code](https://github.com/alurm/browser-read-later-shortcut)
-
-</span>

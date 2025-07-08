@@ -7,14 +7,10 @@
     runHook preBuild
 
     cat << end > index.html
-      <html>
-        <head>
-          <link rel="stylesheet" href="style.css"/>
-        </head>
-        <body>
-          $(pandoc -f gfm -i index.md)
-        </body>
-      </html>
+      ${import ../html-template.nix {
+        stylePath = "style.css";
+        mdPath = "index.md";
+      }}
     end
 
     runHook postBuild
