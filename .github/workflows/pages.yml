@@ -20,7 +20,6 @@ jobs:
     steps:
       - uses: actions/checkout@4.2.2
       - uses: DeterminateSystems/determinate-nix-action@main
-      - uses: DeterminateSystems/magic-nix-cache-action@main
       - run: nix build --print-build-logs
       - name: Upload
         uses: actions/upload-pages-artifact@v3
