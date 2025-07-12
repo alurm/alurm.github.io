@@ -22,8 +22,8 @@
 
 ## Blog
 
-* [C scripting with TCC and Bash](blog/c-scripting-with-tcc-and-bash.html)
-* [An argument for having trailing slashes in canonical directory paths](blog/an-argument-for-having-trailing-slashes-in-canonical-directory-paths.html)
+* [C scripting with TCC and Bash](blog/2024-08-18-c-scripting-with-tcc-and-bash.html)
+* [An argument for having trailing slashes in canonical directory paths](blog/2024-09-17-an-argument-for-having-trailing-slashes-in-canonical-directory-paths.html)
 
 ## Web extensions
 
