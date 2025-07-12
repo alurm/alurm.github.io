@@ -1,7 +1,7 @@
 name: Deploy to pages
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 permissions:
   contents: read
