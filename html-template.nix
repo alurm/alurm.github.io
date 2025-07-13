@@ -7,6 +7,11 @@
       <meta charset="utf-8"/>
       ${
         if !isNull title then ''
+          <meta name="twitter:card" content="summary"/>
+          <meta
+            name="twitter:title"
+            content="$(cat "${title}" | jq --raw-{input,output} @html)"
+          />
           <title>$(cat ${title})</title>
         '' else ""
       }
