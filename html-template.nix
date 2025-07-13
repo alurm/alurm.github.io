@@ -7,7 +7,7 @@
       <meta charset="utf-8"/>
       ${
         if !isNull title then ''
-          <title>$(cat ${title})<title>
+          <title>$(cat ${title})</title>
         '' else ""
       }
     </head>
