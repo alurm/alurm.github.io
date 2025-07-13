@@ -1,19 +1,19 @@
-{pandoc, pkgs}: pkgs.stdenv.mkDerivation {
+{pkgs, pandoc, jq}: pkgs.stdenv.mkDerivation {
   name = "blog.alurm.github.io";
   src = builtins.path {path = ./.;};
-  nativeBuildInputs = [pandoc];
+  nativeBuildInputs = [pandoc jq];
   
   buildPhase = ''
     runHook preBuild
     for post in *.md; do
       base=''${post%.md}
-      cat << end > "$base.html"
+      cat << heredoc > "$base.html"
         ${import ../html-template.nix {
           title = "$base.title";
           style = "../style.css";
           post = "$post";
         }}
-    end
+    heredoc
 
     done
     runHook postBuild

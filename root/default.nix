@@ -1,7 +1,7 @@
-{pandoc, pkgs}: pkgs.stdenv.mkDerivation {
+{pkgs, pandoc, jq}: pkgs.stdenv.mkDerivation {
   name = "root.alurm.github.io";
   src = builtins.path {path = ./.;};
-  nativeBuildInputs = [pandoc];
+  nativeBuildInputs = [pandoc jq];
   
   buildPhase = ''
     runHook preBuild
