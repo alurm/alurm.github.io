@@ -1,7 +1,3 @@
-<title>An argument for having trailing slashes in canonical directory paths</title>
-
-# An argument for having trailing slashes in canonical directory paths
-
 I was writing some GNU make today and remembered an age old question: "Should canonical directory paths contain a trailing slash (as in `dir/`) or not (as in `dir`)?"
 
 I always thought that they shouldn't (so, `dir`).

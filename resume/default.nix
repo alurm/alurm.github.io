@@ -12,6 +12,7 @@
       ${import ../html-template.nix {
         style = "../style.css";
         post = ./alan-urmancheev.typ;
+        format = "typst";
       }}
     end
 

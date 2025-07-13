@@ -1,7 +1,3 @@
-<title>C scripting with TCC and Bash</title>
-
-# C scripting with TCC and Bash
-
 How to know what's the value of the constant `INT_MAX` in the C header `<limits.h>`? There are many ways. However, here's how I like to do it: by running a script in C. Here it is:
 
 	$ tcc -run <(printf '%s\n' '#include <'{stdio,limits}'.h>' 'int main() { printf("%u\n", INT_MAX); }')

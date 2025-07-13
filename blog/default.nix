@@ -5,11 +5,13 @@
   
   buildPhase = ''
     runHook preBuild
-    for i in *.md; do
-      cat << end > "''${i%.md}.html"
+    for post in *.md; do
+      base=''${post%.md}
+      cat << end > "$base.html"
         ${import ../html-template.nix {
+          title = "$base.title";
           style = "../style.css";
-          post = "$i";
+          post = "$post";
         }}
     end
 
