@@ -1,7 +1,3 @@
-<title>Alan Urmancheev, a software engineer</title>
-
-# Alan Urmancheev, a software engineer
-
 [Resume](resume/alan-urmancheev.pdf) ([HTML version](resume/alan-urmancheev.html))
 
 ## Contacts

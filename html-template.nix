@@ -7,10 +7,6 @@
       <meta charset="utf-8"/>
       ${
         if !isNull title then ''
-          <meta
-            name="description"
-            content="$(cat "${title}" | jq --raw-{input,output} @html)"
-          />
           <title>$(cat ${title})</title>
         '' else ""
       }

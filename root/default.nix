@@ -6,12 +6,13 @@
   buildPhase = ''
     runHook preBuild
 
-    cat << end > index.html
+    cat << heredoc > index.html
       ${import ../html-template.nix {
         style = "style.css";
         post = "index.md";
+        title = "index.title";
       }}
-    end
+    heredoc
 
     runHook postBuild
   '';

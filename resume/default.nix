@@ -8,13 +8,13 @@
 
     typst compile alan-urmancheev.typ alan-urmancheev.pdf
 
-    cat << end > alan-urmancheev.html
+    cat << heredoc > alan-urmancheev.html
       ${import ../html-template.nix {
         style = "../style.css";
         post = ./alan-urmancheev.typ;
         format = "typst";
       }}
-    end
+    heredoc
 
     runHook postBuild
   '';
