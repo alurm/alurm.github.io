@@ -5,11 +5,7 @@
       <link rel="stylesheet" href="${style}"/>
       <meta name="viewport" content="width=device-width"/>
       <meta charset="utf-8"/>
-      ${
-        if !isNull title then ''
-          <title>$(cat ${title})</title>
-        '' else ""
-      }
+      ${if !isNull title then "<title>$(cat ${title})</title>" else ""}
     </head>
     <body>
       $(
