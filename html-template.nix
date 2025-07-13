@@ -10,6 +10,10 @@
           <meta name="twitter:card" content="summary"/>
           <meta
             name="twitter:title"
+            content="Alan Urmancheev's site"
+          />
+          <meta
+            name="twitter:description"
             content="$(cat "${title}" | jq --raw-{input,output} @html)"
           />
           <title>$(cat ${title})</title>
