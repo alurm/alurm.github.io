@@ -28,7 +28,6 @@
         devShells.default = pkgs.mkShell {
           inputsFrom = builtins.attrValues self.packages.${system};
         };
-        formatter = pkgs.nixfmt-tree;
       }
     );
 }

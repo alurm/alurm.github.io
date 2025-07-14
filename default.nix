@@ -7,6 +7,20 @@
 pkgs.stdenv.mkDerivation {
   name = "alurm.github.io";
   src = builtins.path { path = ./.; };
+  nativeBuildInputs = with pkgs; [
+    treefmt
+    nixfmt-rfc-style
+  ];
+
+  doCheck = true;
+
+  checkPhase = ''
+    runHook preCheck
+
+    treefmt --ci
+
+    runHook postCheck
+  '';
 
   buildPhase = ''
     runHook preBuild
@@ -15,6 +29,7 @@ pkgs.stdenv.mkDerivation {
 
   installPhase = ''
     runHook preInstall
+
     mkdir "$out"
 
     cp -r "${blog}/." "$out/blog"
