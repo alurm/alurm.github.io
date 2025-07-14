@@ -1,8 +1,14 @@
-{pkgs, pandoc, typst, jq}: pkgs.stdenv.mkDerivation {
+{
+  pkgs,
+  pandoc,
+  typst,
+  jq,
+}:
+pkgs.stdenv.mkDerivation {
   name = "resume.alurm.github.io";
   src = builtins.path {path = ./.;};
   nativeBuildInputs = [pandoc typst jq];
-  
+
   buildPhase = ''
     runHook preBuild
 
@@ -10,10 +16,10 @@
 
     cat << heredoc > alan-urmancheev.html
       ${import ../html-template.nix {
-        style = "../style.css";
-        post = ./alan-urmancheev.typ;
-        format = "typst";
-      }}
+      style = "../style.css";
+      post = ./alan-urmancheev.typ;
+      format = "typst";
+    }}
     heredoc
 
     runHook postBuild
