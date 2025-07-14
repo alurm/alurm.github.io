@@ -6,7 +6,7 @@
 }:
 pkgs.stdenv.mkDerivation {
   name = "alurm.github.io";
-  src = builtins.path {path = ./.;};
+  src = builtins.path { path = ./.; };
 
   buildPhase = ''
     runHook preBuild
