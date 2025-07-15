@@ -11,7 +11,6 @@ pkgs.stdenv.mkDerivation {
   nativeBuildInputs = with pkgs; [
     treefmt
     nixfmt-rfc-style
-    rsync
   ];
 
   doCheck = true;
@@ -34,10 +33,13 @@ pkgs.stdenv.mkDerivation {
 
     mkdir "$out"
 
-    rsync -vh "${blog}/" "$out/blog"
-    rsync -vh "${resume}/" "$out/resume"
-    rsync -vh "${root}/" "$out/"
-    rsync -vh "${ft-yerevan-unofficial-guide}/index.html" "$out/42-yerevan-unofficial-guide/"
+    cp -r "${root}/." "$out"
+    cp -r "${blog}/." "$out/blog"
+    cp -r "${resume}/." "$out/resume"
+
+    mkdir "$out/42-yerevan-unofficial-guide"
+
+    cp -r "${ft-yerevan-unofficial-guide}/index.html" "$out/42-yerevan-unofficial-guide/index.html"
 
     runHook postInstall
   '';
