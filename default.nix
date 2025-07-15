@@ -3,6 +3,7 @@
   blog,
   root,
   resume,
+  ft-yerevan-unofficial-guide,
 }:
 pkgs.stdenv.mkDerivation {
   name = "alurm.github.io";
@@ -10,6 +11,7 @@ pkgs.stdenv.mkDerivation {
   nativeBuildInputs = with pkgs; [
     treefmt
     nixfmt-rfc-style
+    rsync
   ];
 
   doCheck = true;
@@ -32,9 +34,10 @@ pkgs.stdenv.mkDerivation {
 
     mkdir "$out"
 
-    cp -r "${blog}/." "$out/blog"
-    cp -r "${resume}/." "$out/resume"
+    cp -r "${blog}" "$out"
+    cp -r "${resume}" "$out"
     cp -r "${root}/." "$out"
+    rsync -avh "${ft-yerevan-unofficial-guide}/index.html" "$out/42-yerevan-unofficial-guide/"
 
     runHook postInstall
   '';

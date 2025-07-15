@@ -18,6 +18,22 @@
         "type": "github"
       }
     },
+    "ft-yerevan-unofficial-guide": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1720207326,
+        "narHash": "sha256-I0gGjpVKxtYcwWp4iA2rIEGjHbRMzCPtZegIau0WHmQ=",
+        "owner": "alurm",
+        "repo": "42-yerevan-unofficial-guide",
+        "rev": "ea6a11b334fdb8b2d285ee79189c80a133f95dde",
+        "type": "github"
+      },
+      "original": {
+        "owner": "alurm",
+        "repo": "42-yerevan-unofficial-guide",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1742272065,
@@ -37,6 +53,7 @@
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "ft-yerevan-unofficial-guide": "ft-yerevan-unofficial-guide",
         "nixpkgs": "nixpkgs"
       }
     },
