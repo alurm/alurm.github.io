@@ -1,36 +1,15 @@
 {
-  pkgs,
-  pandoc,
-  jq,
+  callPackage,
+  linkFarmFromDrvs,
 }:
-pkgs.stdenv.mkDerivation {
-  name = "blog.alurm.github.io";
-  src = builtins.path { path = ./.; };
-  nativeBuildInputs = [
-    pandoc
-    jq
+let
+  paths = [
+    ./2024-08-18-c-scripting-with-tcc-and-bash
+    ./2024-09-17-an-argument-for-having-trailing-slashes-in-canonical-directory-paths
   ];
 
-  buildPhase = ''
-    runHook preBuild
-    for post in *.md; do
-      base=''${post%.md}
-      cat << heredoc > "$base.html"
-        ${import ../html-template.nix {
-          title = "$base.title";
-          style = "../style.css";
-          post = "$post";
-        }}
-    heredoc
+  makePost = path: callPackage (import ./make-post.nix path) { };
 
-    done
-    runHook postBuild
-  '';
-
-  installPhase = ''
-    runHook preInstall
-    mkdir "$out"
-    cp *.html *.md "$out"
-    runHook postInstall
-  '';
-}
+  posts = map makePost paths;
+in
+linkFarmFromDrvs "blog.alurm.github.io" posts

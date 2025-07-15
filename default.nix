@@ -34,10 +34,10 @@ pkgs.stdenv.mkDerivation {
 
     mkdir "$out"
 
-    cp -r "${blog}" "$out"
-    cp -r "${resume}" "$out"
-    cp -r "${root}/." "$out"
-    rsync -avh "${ft-yerevan-unofficial-guide}/index.html" "$out/42-yerevan-unofficial-guide/"
+    rsync -vh "${blog}/" "$out/blog"
+    rsync -vh "${resume}/" "$out/resume"
+    rsync -vh "${root}/" "$out/"
+    rsync -vh "${ft-yerevan-unofficial-guide}/index.html" "$out/42-yerevan-unofficial-guide/"
 
     runHook postInstall
   '';
