@@ -50,10 +50,11 @@ Have a technology focused #link("https://t.me/alurman")[Telegram blog], have giv
 == Open source
 
 Contributed fixes to
+CueKeeper (#link("https://github.com/talex5/cuekeeper/pull/45")[1]),
+`ki-editor` (#link("https://github.com/ki-editor/ki-editor/pull/665")[1], #link("https://github.com/ki-editor/ki-editor/pull/663")[2]),
 Go (#link("https://github.com/golang/go/issues/62225")[1]),
 Dart (#link("https://github.com/dart-lang/site-www/pull/4618")[1], #link("https://github.com/dart-lang/site-www/pull/5825")[2]),
 Nushell (#link("https://github.com/nushell/nushell.github.io/pull/835")[1]),
 Pallene (#link("https://github.com/pallene-lang/pallene/pull/570")[1]),
 `json-c` (#link("https://github.com/json-c/json-c/pull/858")[1]),
-Upspin (#link("https://github.com/upspin/upspin/issues/663")[1]),
-CueKeeper (#link("https://github.com/talex5/cuekeeper/pull/45")[1]).
+Upspin (#link("https://github.com/upspin/upspin/issues/663")[1]).
