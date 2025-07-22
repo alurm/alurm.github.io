@@ -24,7 +24,7 @@ Languages: C1 English, fluent Russian.
 
 == Education
 
-In IT since 2019. Studying for a bachelor's degree at the #link("https://42.fr")[programming school 42] for the third year, having #link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/master/resume/alan-urmancheev-42-common-core.pdf")[completed] the main curriculum.
+Studying at the #link("https://42.fr")[programming school 42] for the fourth year, having completed the main curriculum (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[certificate]).
 
 == Work experience
 

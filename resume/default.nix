@@ -33,8 +33,8 @@ pkgs.stdenv.mkDerivation {
     runHook preInstall
     mkdir "$out"
 
-    cp alan-urmancheev.{html,pdf,typ} "$out"
-    cp alan-urmancheev-42-common-core.pdf "$out"
+    cp ./alan-urmancheev.{html,pdf,typ} "$out"
+    cp ./alan-urmancheev-42-yerevan-completion-certificate.pdf "$out"
 
     runHook postInstall
   '';
