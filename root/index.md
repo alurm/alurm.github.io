@@ -1,11 +1,10 @@
-[Resume](resume/alan-urmancheev.pdf) ([HTML version](resume/alan-urmancheev.html))
-
-## Links
+[Resume](resume/alan-urmancheev.pdf) ([HTML](resume/alan-urmancheev.html))
 
 * [Email](mailto:alan.urman@gmail.com)
+* [GitHub](https://github.com/alurm)
+* [LinkedIn](https://linkedin.com/in/alurm)
 * [Telegram](https://t.me/alurm)
 * [X](https://twitter.com/alurmanc)
-* [GitHub](https://github.com/alurm)
 * [YouTube](https://youtube.com/@alurma)
 * [Telegram blog](https://t.me/alurman)
 

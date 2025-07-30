@@ -12,7 +12,6 @@
 }
 
 body {
-    margin: 1rem;
     background-color: light-dark(var(--white), var(--black));
     color: light-dark(var(--black), var(--white));
 }
@@ -25,3 +24,11 @@ pre {
     overflow: scroll;
     border: 1px solid light-dark(var(--white), var(--black));
 }
+
+/* Feels weird for web pages, but ok for PDFs. */
+/*
+h1, h2 {
+    display: flex;
+    justify-content: center;
+}
+*/

@@ -1,60 +1,62 @@
-= Alan Urmancheev
-
-Software Engineer
-
 #show link: underline
+#show heading.where(level: 1): it => align(center, it)
+#show heading.where(level: 2): it => align(center, it)
 
-#{
-    let contacts = (
-        link("https://github.com/alurm")[GitHub],
-        link("https://t.me/alurm")[Telegram],
-        link("mailto:alan.urman@gmail.com"),
-        link("https://signal.me/#eu/ZH-viwUBe-3OuVix322oldcqy63d1zCk3Alea4RDRTO00KwKthBN25zt88Ut3isI")[Signal],
-    )
-    grid(columns: contacts.len(), gutter: 5pt, ..contacts)
-}
+= Alan Urmancheev --- Systems Programmer
 
-== Skills
+#link("mailto:alan.urman@gmail.com")
+#link("https://github.com/alurm")[GitHub]
+#link("https://linkedin.com/in/alurm")[LinkedIn]
+#link("https://t.me/alurm")[Telegram]
+#link("https://signal.me/#eu/ZH-viwUBe-3OuVix322oldcqy63d1zCk3Alea4RDRTO00KwKthBN25zt88Ut3isI")[Signal]
 
-Programming languages: Rust, Go, Bash, C, C++.
+== Hard Skills
 
-Technologies: Linux, Git, Docker, Nix, NixOS.
+*Programming languages*: Rust, Go, C/C++, Haskell, Python, Bash.
 
-Languages: C1 English, fluent Russian.
+*Technologies*: Linux, Git, Docker, Nix, SQL, GNU Make.
+
+*Languages*: C1 English, fluent Russian.
 
 == Education
 
-Studying at the #link("https://42.fr")[programming school 42] for the fourth year, having completed the main curriculum (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[certificate]).
+=== #link("https://42.fr")[Programming School 42] (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[certificate]) #h(1fr) July 2021 --- present
 
-== Work experience
+- #link("https://github.com/alurm/42-ping")[Implementation] of the ping utility (C23).
+- #link("https://github.com/alurm/irc")[IRC server] (C++).
+- #link("https://github.com/alurm/pisciners-faces")[Website] to display faces of 42 school students next to their nicknames (GNU Make, Bash, Go, Nix).
 
-=== #link("https://inango.com")[Inango], January 2023 -- April 2023
+== Work Experience
 
-Software Engineer
+=== Software Engineer at #link("https://inango.com")[Inango] #h(1fr) January 2023 --- April 2023
 
 - Wrote a C memory profiler utilizing Linux's `/proc/$pid/maps`. It has been used to analyse memory patterns in a service.
 - Integrated TLS between a company service and a MQTT broker using C, Go, and OpenSSL.
 
-== Personal projects
+== Personal Projects
 
-- A #link("https://github.com/alurm/JSON")[plugin] for the Acme text editor for viewing JSON (Go).
-- A cycle collecting #link("https://github.com/alurm/rust-gc-sh/blob/main/gc/README.md")[garbage collector] and an #link("https://github.com/alurm/rust-gc-sh")[interpreter] for a shell language with closures and hashmaps (Rust).
-- An #link("https://github.com/alurm/42-ping")[implementation] of the ping utility (C23).
-- An #link("https://github.com/alurm/irc")[IRC server] (C++).
-- A #link("https://github.com/alurm/pisciners-faces")[website] to display faces of 42 school students next to their nicknames (Makefile, Bash, Go, Nix).
-- A primitive #link("https://github.com/alurm/rustdns")[DNS server] (Rust).
-- A #link("https://github.com/alurm/tsoping")[Telegram bot] to post channel updates (Bash, NixOS, systemd).
+- #link("https://github.com/alurm/JSON")[Plugin] for the Acme text editor for viewing JSON (Go).
+- Cycle collecting #link("https://github.com/alurm/alush/blob/main/gc/README.md")[garbage collector] and #link("https://github.com/alurm/alush")[interpreter] for a shell language with closures and maps (Rust, Nix).
+- Primitive #link("https://github.com/alurm/rustdns")[DNS server] (Rust).
+- #link("https://github.com/alurm/tsoping")[Telegram bot] to post channel updates (Bash, NixOS, systemd).
+- #link("https://github.com/alurm/leetcode-redirector")[Web server] that takes the number of a LeetCode problem and redirects to the problem itself (Python).
+- Turing machine #link("https://github.com/alurm/turing-haskell")[interpreter] (Haskell, Nix).
 
-Have a technology focused #link("https://t.me/alurman")[Telegram blog], have given talks at various hackerspaces (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2], #link("https://youtube.com/watch?v=noEbul27dHE")[3]).
+Have a technology focused #link("https://t.me/alurman")[blog], have given talks at various hackerspaces (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2], #link("https://youtube.com/watch?v=noEbul27dHE")[3]).
 
-== Open source
+== Open Source
 
-Contributed fixes to
-CueKeeper (#link("https://github.com/talex5/cuekeeper/pull/45")[1]),
-`ki-editor` (#link("https://github.com/ki-editor/ki-editor/pull/665")[1], #link("https://github.com/ki-editor/ki-editor/pull/663")[2]),
-Go (#link("https://github.com/golang/go/issues/62225")[1]),
-Dart (#link("https://github.com/dart-lang/site-www/pull/4618")[1], #link("https://github.com/dart-lang/site-www/pull/5825")[2]),
-Nushell (#link("https://github.com/nushell/nushell.github.io/pull/835")[1]),
-Pallene (#link("https://github.com/pallene-lang/pallene/pull/570")[1]),
-`json-c` (#link("https://github.com/json-c/json-c/pull/858")[1]),
-Upspin (#link("https://github.com/upspin/upspin/issues/663")[1]).
+Contributed to #{
+    let items = (
+        [CueKeeper (#link("https://github.com/talex5/cuekeeper/pull/45")[1])],
+        [`ki-editor` (#link("https://github.com/ki-editor/ki-editor/pull/665")[1], #link("https://github.com/ki-editor/ki-editor/pull/663")[2])],
+        [Nix (#link("https://github.com/NixOS/nix/pull/13525")[1])],
+        [Go (#link("https://github.com/golang/go/issues/62225")[1])],
+        [Dart (#link("https://github.com/dart-lang/site-www/pull/4618")[1], #link("https://github.com/dart-lang/site-www/pull/5825")[2])],
+        [Nushell (#link("https://github.com/nushell/nushell.github.io/pull/835")[1])],
+        [Pallene (#link("https://github.com/pallene-lang/pallene/pull/570")[1])],
+        [`json-c` (#link("https://github.com/json-c/json-c/pull/858")[1])],
+        [Upspin (#link("https://github.com/upspin/upspin/issues/663")[1])],
+    )
+    items.join(", ")
+}.
