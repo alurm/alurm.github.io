@@ -14,7 +14,7 @@
 
 *Programming languages*: Rust, Go, C/C++, Haskell, Python, Bash.
 
-*Technologies*: Linux, Git, Docker, Nix, SQL, GNU Make.
+*Technologies*: Linux, Git, Docker, Nix, GNU Make, SQL.
 
 *Languages*: C1 English, fluent Russian.
 
@@ -36,7 +36,7 @@
 == Personal Projects
 
 - #link("https://github.com/alurm/JSON")[Plugin] for the Acme text editor for viewing JSON (Go).
-- Cycle collecting #link("https://github.com/alurm/alush/blob/main/gc/README.md")[garbage collector] and #link("https://github.com/alurm/alush")[interpreter] for a shell language with closures and maps (Rust, Nix).
+- Cycle collecting #link("https://github.com/alurm/alush/blob/main/gc/README.md")[garbage collector] and #link("https://github.com/alurm/alush")[shell] with closures and maps (Rust, Nix).
 - Primitive #link("https://github.com/alurm/rustdns")[DNS server] (Rust).
 - #link("https://github.com/alurm/tsoping")[Telegram bot] to post channel updates (Bash, NixOS, systemd).
 - #link("https://github.com/alurm/leetcode-redirector")[Web server] that takes the number of a LeetCode problem and redirects to the problem itself (Python).
@@ -46,17 +46,14 @@ Have a technology focused #link("https://t.me/alurman")[blog], have given talks 
 
 == Open Source
 
-Contributed to #{
-    let items = (
-        [CueKeeper (#link("https://github.com/talex5/cuekeeper/pull/45")[1])],
-        [`ki-editor` (#link("https://github.com/ki-editor/ki-editor/pull/665")[1], #link("https://github.com/ki-editor/ki-editor/pull/663")[2])],
-        [Nix (#link("https://github.com/NixOS/nix/pull/13525")[1])],
-        [Go (#link("https://github.com/golang/go/issues/62225")[1])],
-        [Dart (#link("https://github.com/dart-lang/site-www/pull/4618")[1], #link("https://github.com/dart-lang/site-www/pull/5825")[2])],
-        [Nushell (#link("https://github.com/nushell/nushell.github.io/pull/835")[1])],
-        [Pallene (#link("https://github.com/pallene-lang/pallene/pull/570")[1])],
-        [`json-c` (#link("https://github.com/json-c/json-c/pull/858")[1])],
-        [Upspin (#link("https://github.com/upspin/upspin/issues/663")[1])],
-    )
-    items.join(", ")
-}.
+Contributed to #(
+    [CueKeeper (#link("https://github.com/talex5/cuekeeper/pull/45")[1])],
+    [`ki-editor` (#link("https://github.com/ki-editor/ki-editor/pull/665")[1], #link("https://github.com/ki-editor/ki-editor/pull/663")[2])],
+    [Nix (#link("https://github.com/NixOS/nix/pull/13525")[1])],
+    [Go (#link("https://github.com/golang/go/issues/62225")[1])],
+    [Dart (#link("https://github.com/dart-lang/site-www/pull/4618")[1], #link("https://github.com/dart-lang/site-www/pull/5825")[2])],
+    [Nushell (#link("https://github.com/nushell/nushell.github.io/pull/835")[1])],
+    [Pallene (#link("https://github.com/pallene-lang/pallene/pull/570")[1])],
+    [`json-c` (#link("https://github.com/json-c/json-c/pull/858")[1])],
+    [Upspin (#link("https://github.com/upspin/upspin/issues/663")[1])],
+).join(", ").
