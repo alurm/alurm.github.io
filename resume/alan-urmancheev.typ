@@ -34,11 +34,11 @@
 == Projects
 
 - Cycle collecting #link("https://github.com/alurm/alush/blob/main/gc/README.md")[garbage collector] and #link("https://github.com/alurm/alush")[shell] with closures and maps (Rust, Nix).
-- #link("https://github.com/alurm/42-ping")[Implementation] of the ping networking utility (C23).
+- #link("https://github.com/alurm/42-ping")[Implementation] of the ping *networking utility* (C23).
 - #link("https://github.com/alurm/JSON")[Plugin] for the Acme text editor for viewing JSON (Go).
-- #link("https://github.com/alurm/tsoping")[Telegram bot] that has been used to post YouTube channel updates to a group (Bash, NixOS, systemd).
-- #link("https://github.com/alurm/pisciners-faces")[Website] to display photos of students in my campus next to their nicknames (GNU Make, Bash, Go, Nix). Has been used to find nicknames of potential students by their photos and to provide feedback about them.
-- #link("https://github.com/alurm/irc")[IRC server] (C++).
+- #link("https://github.com/alurm/tsoping")[Telegram bot] that *has been used* to post YouTube channel updates to a group (Bash, NixOS, systemd).
+- #link("https://github.com/alurm/pisciners-faces")[Website] to display photos of students in my campus next to their nicknames (GNU Make, Bash, Go, Nix). *Has been used* to find nicknames of potential students by their photos and to provide feedback about them.
+- #link("https://github.com/alurm/irc")[IRC server] (C++). This was a group project *I have lead*.
 - Turing machine #link("https://github.com/alurm/turing-haskell")[interpreter] (Haskell, Nix).
 
 Have a technology focused #link("https://t.me/alurman")[blog], have given talks at various hackerspaces (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2], #link("https://youtube.com/watch?v=noEbul27dHE")[3]).
