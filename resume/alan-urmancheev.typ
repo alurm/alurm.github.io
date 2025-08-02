@@ -2,7 +2,7 @@
 #show heading.where(level: 1): it => align(center, it)
 #show heading.where(level: 2): it => align(center, it)
 
-= Alan Urmancheev --- Systems Programmer
+= Alan Urmancheev --- Software Engineer
 
 #link("mailto:alan.urman@gmail.com")
 #link("https://github.com/alurm")[GitHub]
@@ -10,19 +10,23 @@
 #link("https://t.me/alurm")[Telegram]
 #link("https://signal.me/#eu/ZH-viwUBe-3OuVix322oldcqy63d1zCk3Alea4RDRTO00KwKthBN25zt88Ut3isI")[Signal]
 
+Passionate software engineer with a 42 Common Core certificate, proficient in Rust, C, Go, and systems programming.
+
 == Technical Skills
 
 *Programming languages*: Rust, C, Bash, Go.
 
 *Technologies*: Linux, Git, Docker, Nix, GNU Make.
 
-*Languages*: C1 English, fluent Russian.
+*Languages*: English (C1), Russian (fluent).
 
 *Secondary skills*: C++, Haskell, Python, SQL.
 
 == Education
 
-=== #link("https://42.fr")[Programming School 42] (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[certificate]) #h(1fr) July 2021 --- present
+=== #link("https://42.fr")[42] (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[certificate]) #h(1fr) July 2021 --- present
+
+Completed intensive, project-based curriculum in C, C++, algorithms, and systems programming, equivalent to 2 years of professional coding experience.
 
 == Work Experience
 
