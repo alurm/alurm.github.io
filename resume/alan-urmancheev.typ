@@ -10,8 +10,6 @@
 #link("https://t.me/alurm")[Telegram]
 #link("https://signal.me/#eu/ZH-viwUBe-3OuVix322oldcqy63d1zCk3Alea4RDRTO00KwKthBN25zt88Ut3isI")[Signal]
 
-Passionate software engineer with a 42 Common Core certificate, proficient in Rust, C, Go, and systems programming.
-
 == Technical Skills
 
 *Programming languages*: Rust, C, Bash, Go.
