@@ -18,7 +18,7 @@
 
 *Languages*: English (C1), Russian (fluent).
 
-*Secondary skills*: C++, Haskell, Python, SQL.
+*Secondary skills*: C++, Haskell, Python, SQL, computer networking, system administration.
 
 == Education
 
