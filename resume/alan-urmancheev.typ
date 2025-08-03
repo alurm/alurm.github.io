@@ -35,6 +35,7 @@ Completed intensive, project-based curriculum in C, C++, algorithms, and systems
 
 == Projects
 
+- #link("https://github.com/alurm/json2dir")[Tool] that converts JSON objects to directory trees. Is used with Nix as a simpler *replacement for #link("https://github.com/nix-community/home-manager")[home-manager]* for generating and versioning configuration (Rust, Nix).
 - Cycle collecting *#link("https://github.com/alurm/alush/blob/main/gc/README.md")[garbage collector]* and #link("https://github.com/alurm/alush")[shell] with closures and maps (Rust, Nix).
 - #link("https://github.com/alurm/42-ping")[Implementation] of the ping *networking utility* (C23).
 - *#link("https://github.com/alurm/JSON")[Plugin] for the Acme text editor* for viewing JSON (Go).
