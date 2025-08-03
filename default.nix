@@ -38,8 +38,12 @@ pkgs.stdenv.mkDerivation {
     cp -r "${resume}/." "$out/resume"
 
     mkdir "$out/42-yerevan-unofficial-guide"
-
     cp -r "${ft-yerevan-unofficial-guide}/index.html" "$out/42-yerevan-unofficial-guide/index.html"
+
+    mkdir "$out/extensions"
+    mkdir "$out/extensions/remove-content-disposition"
+
+    cp {.,"$out"}"/extensions/remove-content-disposition/extension.xpi"
 
     runHook postInstall
   '';
