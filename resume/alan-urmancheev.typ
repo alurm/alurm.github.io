@@ -44,17 +44,17 @@ Completed intensive, project-based curriculum in C, C++, algorithms, and systems
 
 Have a *technology focused #link("https://t.me/alurman")[blog]*, *have given talks* at various hackerspaces (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2], #link("https://youtube.com/watch?v=noEbul27dHE")[3]).
 
-== Open Source
+== Open Source Contributions
 
-Have contributed to #(
-    [`ki-editor` (#link("https://github.com/ki-editor/ki-editor/pull/665")[1], #link("https://github.com/ki-editor/ki-editor/pull/663")[2])],
-    [CueKeeper (#link("https://github.com/talex5/cuekeeper/pull/45")[1])],
-    [Nix (#link("https://github.com/NixOS/nix/pull/13525")[1])],
-    [Go (#link("https://github.com/golang/go/issues/62225")[1])],
-    [Dart (#link("https://github.com/dart-lang/site-www/pull/4618")[1], #link("https://github.com/dart-lang/site-www/pull/5825")[2])],
-    [Nushell (#link("https://github.com/nushell/nushell.github.io/pull/835")[1])],
-    [Pallene (#link("https://github.com/pallene-lang/pallene/pull/570")[1])],
-    [`json-c` (#link("https://github.com/json-c/json-c/pull/858")[1])],
-    [Upspin (#link("https://github.com/upspin/upspin/issues/663")[1])],
-    [`vis` (#link("https://github.com/martanne/vis/pull/1239")[1])],
-).join(", ").
+Have contributed to:
+
+- #link("https://github.com/ki-editor/ki-editor")[`ki-editor`] text editor: #link("https://github.com/ki-editor/ki-editor/pull/665")[1], #link("https://github.com/ki-editor/ki-editor/pull/663")[2]
+- #link("https://github.com/talex5/cuekeeper")[CueKeeper] Get Things Done system: #link("https://github.com/talex5/cuekeeper/pull/45")[1]
+- #link("https://github.com/nixos/nix")[Nix] package manager: #link("https://github.com/nixos/nix/pull/13525")[1]
+- #link("https://github.com/golang")[Go] programming language: #link("https://github.com/golang/go/issues/62225")[1]
+- #link("https://github.com/dart-lang")[Dart] programming language: #link("https://github.com/dart-lang/site-www/pull/4618")[1], #link("https://github.com/dart-lang/site-www/pull/5825")[2]
+- #link("https://github.com/nushell")[Nushell] shell #link("https://github.com/nushell/nushell.github.io/pull/835")[1]
+- #link("https://github.com/pallene-lang/pallene")[Pallene] programming language: #link("https://github.com/pallene-lang/pallene/pull/570")[1]
+- #link("https://github.com/json-c/json-c")[`json-c`] JSON library #link("https://github.com/json-c/json-c/pull/858")[1]
+- #link("https://github.com/upspin/upspin")[Upspin] name system: #link("https://github.com/upspin/upspin/issues/663")[1]
+- #link("https://github.com/martanne/vis")[`vis`] text editor: #link("https://github.com/martanne/vis/pull/1239")[1]
