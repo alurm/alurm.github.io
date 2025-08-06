@@ -2,7 +2,7 @@
 #show heading.where(level: 1): it => align(center, it)
 #show heading.where(level: 2): it => align(center, it)
 
-= Alan Urmancheev --- Software Engineer, Systems Programmer
+= Alan Urmancheev — Software Engineer, Systems Programmer
 
 #link("mailto:alan.urman@gmail.com")
 #link("https://github.com/alurm")[GitHub]
@@ -22,13 +22,13 @@
 
 == Education
 
-=== #link("https://42.fr")[42] (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[certificate]) #h(1fr) July 2021 --- present
+=== #link("https://42.fr")[42] (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[certificate]) #h(1fr) July 2021 — present
 
 Completed intensive, project-based curriculum in C, C++, algorithms, and systems programming, equivalent to 2 years of professional coding experience.
 
 == Work Experience
 
-=== Software Engineer at #link("https://inango.com")[Inango] #h(1fr) January 2023 --- April 2023
+=== Software Engineer at #link("https://inango.com")[Inango] #h(1fr) January 2023 — April 2023
 
 - Wrote a C memory profiler utilizing Linux's `/proc/$pid/maps`. It has been used to *analyse memory usage patterns* in a service.
 - *Integrated TLS* between a company service and a MQTT broker using C, Go, and OpenSSL.
