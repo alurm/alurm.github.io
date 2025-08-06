@@ -16,6 +16,10 @@ let
       date = "2024-09-17";
       rest = "an-argument-for-having-trailing-slashes-in-canonical-directory-paths";
     }
+    {
+      date = "2025-08-07";
+      rest = "first-class-lists-in-shells";
+    }
   ];
 
   paths = map (
