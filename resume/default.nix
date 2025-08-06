@@ -2,7 +2,7 @@
   pkgs,
   pandoc,
   typst,
-  jq,
+  lib,
 }:
 pkgs.stdenv.mkDerivation {
   name = "resume.alurm.github.io";
@@ -10,7 +10,6 @@ pkgs.stdenv.mkDerivation {
   nativeBuildInputs = [
     pandoc
     typst
-    jq
   ];
 
   buildPhase = ''
@@ -19,7 +18,7 @@ pkgs.stdenv.mkDerivation {
     typst compile alan-urmancheev.typ alan-urmancheev.pdf
 
     cat << heredoc > alan-urmancheev.html
-      ${import ../html-template.nix {
+      ${import ../html-template.nix lib {
         style = "../style.css";
         post = ./alan-urmancheev.typ;
         format = "typst";

@@ -2,7 +2,7 @@ src:
 {
   pkgs,
   pandoc,
-  jq,
+  lib,
 }:
 pkgs.stdenv.mkDerivation {
   inherit src;
@@ -11,14 +11,13 @@ pkgs.stdenv.mkDerivation {
 
   nativeBuildInputs = [
     pandoc
-    jq
   ];
 
   buildPhase = ''
     runHook preBuild
 
     cat << heredoc > it.html
-      ${import ../html-template.nix {
+      ${import ../html-template.nix lib {
         title = "it.title";
         style = "../style.css";
         post = "it.md";

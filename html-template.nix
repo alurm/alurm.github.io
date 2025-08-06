@@ -1,3 +1,4 @@
+lib:
 {
   style,
   post,
@@ -13,6 +14,11 @@
       <meta charset="utf-8"/>
       ${
         if !isNull title then
+          # Not sure how bad is it to escape HTML with lib.escapeXML.
+          # `jq --raw-{input,output} @html` could be used here instead.
+          # But consider this:
+          # nix-repl> lib.escapeXML "'<>&\""
+          # "&apos;&lt;&gt;&amp;&quot;"
           ''
             <meta name="twitter:card" content="summary"/>
             <meta
@@ -21,7 +27,7 @@
             />
             <meta
               name="twitter:description"
-              content="$(cat "${title}" | jq --raw-{input,output} @html)"
+              content="${lib.escapeXML title}"
             />
             <title>$(cat ${title})</title>
           ''
