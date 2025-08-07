@@ -1,4 +1,4 @@
-## Preambule
+## Preamble
 
 It's not a secret that most common shells don't have first class lists.
 
