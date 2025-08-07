@@ -1,4 +1,4 @@
-#show link: underline
+#show link: it => underline(text(blue, it))
 #show heading.where(level: 1): it => align(center, it)
 #show heading.where(level: 2): it => align(center, it)
 
