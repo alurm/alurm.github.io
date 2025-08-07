@@ -19,6 +19,11 @@ body {
     padding: 1rem;
 }
 
+/*
+TODO: consider this:
+body { max-width: 720px }
+*/
+
 @media (min-width: 768px) {
     body {
         width: 80%

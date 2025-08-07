@@ -12,6 +12,8 @@ As a more practical example of this, let's implement `split-by-double-dash`, a f
 
 So, for example, `split-by-double-dash a b c -- d e f` should return the lists `[a, b, c]` and `[d, e, f]`, *somehow*.
 
+One possible use case for this would be a wrapper around a utility that accepts arguments in this form.
+
 ## The quoting way with jq
 
 Some utilities can return text quoted in the syntax of shell. For examples, [getopt](https://man7.org/linux/man-pages/man1/getopt.1.html) and [jq](https://jqlang.org/manual/#format-strings-and-escaping) can do that. `getopt` can indeed help us solve the problem of parsing cli options, but we'll focus on `jq` here.
@@ -177,6 +179,26 @@ fn split-by-double-dash {
   }
 }
 ```
+
+Given that you have `es` installed, here's how to use this:
+
+```
+(before after) = <= { split-by-double-dash a b c -- d e f }
+
+printf '%s\n' <=$before
+# Output:
+# a
+# b
+# c
+
+printf '%s\n' <=$after
+# Output:
+# d
+# e
+# f
+```
+
+What's interesting is that `(before after)` works since you *can* return lists. It's just that you can't nest them, by default.
 
 ## Conclusion
 
