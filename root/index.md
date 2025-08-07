@@ -1,4 +1,4 @@
-[Resume](resume/alan-urmancheev.pdf) ([HTML](resume/alan-urmancheev.html))
+Looking for a job! Check out my [resume](resume/alan-urmancheev.pdf) ([HTML](resume/alan-urmancheev.html))
 
 * [Email](mailto:alan.urman@gmail.com)
 * [GitHub](https://github.com/alurm)
