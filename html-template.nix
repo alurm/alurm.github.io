@@ -13,6 +13,11 @@ assert lib.assertMsg (lib.typeOf style == "string") "the stylesheet can't point 
   <!doctype html>
   <html>
     <head>
+      <link
+        rel="alternate"
+        type="application/atom+xml"
+        title="Atom feed for Alan Urmancheev's blog"
+      />
       <link rel="stylesheet" href="${style}"/>
       <meta name="viewport" content="width=device-width"/>
       <meta charset="utf-8"/>

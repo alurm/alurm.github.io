@@ -157,7 +157,7 @@ fn split-by-double-dash {
     # This is a hack to avoid shelling-out to `expr` to increment `i` on each iteration.
     indicies = `{ seq $#* }
   ) {
-    # `$*($i)` taking the i-th element from `$*`.
+    # `$*($i)` is taking the i-th element from `$*`.
     for (i = $indicies) if { ~ $*($i) -- } {
       # If we have found --, it's time to split.
       before = <= {

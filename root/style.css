@@ -14,6 +14,9 @@
 body {
     background-color: light-dark(var(--white), var(--black));
     color: light-dark(var(--black), var(--white));
+
+    margin: 0 auto;
+    width: 80ch;
 }
 
 a:not(:visited) {
