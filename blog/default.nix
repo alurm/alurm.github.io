@@ -37,14 +37,10 @@ let
   posts = linkFarmFromDrvs "posts.blog.alurm.github.io" postsDrvs;
 in
 # TODO: remove work duplication here.
-runCommand "blog.alurm.github.io"
-  {
-    nativeBuildInputs = [ lndir ];
-  }
-  ''
-    mkdir "$out"
-    cd "$out"
-    lndir "${posts}"
+runCommand "blog.alurm.github.io" { } ''
+  mkdir "$out"
+  cd "$out"
+  ${lndir}/bin/lndir "${posts}"
 
-    cp ${builtins.toFile "feed.xml" (import ./make-feed.nix lib components-of-paths)} "$out/feed.xml"
-  ''
+  cp ${builtins.toFile "feed.xml" (import ./make-feed.nix lib components-of-paths)} "$out/feed.xml"
+''

@@ -1,37 +1,15 @@
 src:
 {
-  pkgs,
   pandoc,
   lib,
+  runCommand,
 }:
-pkgs.stdenv.mkDerivation {
-  inherit src;
-
-  name = "${builtins.baseNameOf (builtins.toString src)}.html";
-
-  nativeBuildInputs = [
-    pandoc
-  ];
-
-  buildPhase = ''
-    runHook preBuild
-
-    cat << heredoc > it.html
-      ${import ../html-template.nix lib {
-        title = "it.title";
-        style = "../style.css";
-        post = "it.md";
-      }}
-    heredoc
-
-    runHook postBuild
-  '';
-
-  installPhase = ''
-    runHook preInstall
-
-    mv "it.html" "$out"
-
-    runHook postInstall
-  '';
-}
+runCommand "${builtins.baseNameOf (builtins.toString src)}.html" { } ''
+  cat << heredoc > "$out"
+    ${import ../html-template.nix { inherit lib pandoc; } {
+      title = builtins.readFile "${src}/it.title";
+      style = "../style.css";
+      post = "${src}/it.md";
+    }}
+  heredoc
+''

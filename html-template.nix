@@ -1,10 +1,14 @@
-lib:
+{
+  pandoc,
+  lib,
+}:
 {
   style,
   post,
   title ? null,
   format ? "markdown",
 }:
+assert lib.assertMsg (lib.typeOf style == "string") "the stylesheet can't point to the Nix store";
 ''
   <!doctype html>
   <html>
@@ -29,7 +33,7 @@ lib:
               name="twitter:description"
               content="${lib.escapeXML title}"
             />
-            <title>$(cat ${title})</title>
+            <title>${lib.escapeXML title}</title>
           ''
         else
           ""
@@ -41,15 +45,14 @@ lib:
           ${
             if !isNull title then
               ''
-                echo -n '# '
-                cat ${title}
+                printf '# %s\n' ${lib.escapeShellArg title}
               ''
             else
               ""
           }
           cat ${post}
         } |
-        pandoc --from=${format}
+        ${pandoc}/bin/pandoc --from=${format}
       )
     </body>
   </html>
