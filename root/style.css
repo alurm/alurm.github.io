@@ -16,7 +16,25 @@ body {
     color: light-dark(var(--black), var(--white));
 
     margin: 0 auto;
-    width: 80ch;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    body {
+        width: 80%
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        width: 65%;
+    }
+}
+
+@media (min-width: 1440px) {
+    body {
+        width: 50%;
+    }
 }
 
 a:not(:visited) {
