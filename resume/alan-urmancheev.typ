@@ -16,7 +16,7 @@
 
 *Technologies*: Linux, Git, Docker, Nix, GNU Make.
 
-*Languages*: English (advanced, C1), Russian (fluent).
+*Languages*: English (advanced, C1), Russian (native).
 
 *Secondary skills*: C++, Haskell, Python, SQL, computer networking, system administration.
 
