@@ -4,7 +4,7 @@
 
 = Alan Urmancheev — Software Engineer, Systems Programmer
 
-Software engineer, systems programmer, 42 school graduate, open source contributor, public speaker.
+Summary: software engineer, systems programmer, 42 school graduate, open source contributor.
 
 #link("mailto:alan.urman@gmail.com")
 #link("https://github.com/alurm")[GitHub]
@@ -14,7 +14,7 @@ Software engineer, systems programmer, 42 school graduate, open source contribut
 
 == Technical Skills
 
-*Programming languages*: Rust, C, Bash, Go.
+*Programming languages*: Rust, C, Go, Bash.
 
 *Technologies*: Linux, Git, Docker, Nix, GNU Make.
 
@@ -38,19 +38,17 @@ Completed an intensive, project-based curriculum in C, C++, algorithms, and syst
 
 == Projects
 
-- #link("https://github.com/alurm/json2dir")[Tool] that converts JSON objects to directory trees. Is used with Nix as a simpler *replacement for #link("https://github.com/nix-community/home-manager")[home-manager]* for generating and versioning configuration (Rust, Nix).
+- #link("https://github.com/alurm/json2dir")[`json2dir`]: JSON-to-directory converter], *which is used as a fast alternative to home-manager* for managing dotfiles (Rust, Nix).
 - Cycle collecting *#link("https://github.com/alurm/alush/blob/main/gc/README.md")[garbage collector]* and #link("https://github.com/alurm/alush")[shell] with closures and maps (Rust, Nix).
 - #link("https://github.com/alurm/42-ping")[Implementation] of the ping *networking utility* (C23).
 - *#link("https://github.com/alurm/JSON")[Plugin] for the Acme text editor* for viewing JSON (Go).
 - #link("https://github.com/alurm/tsoping")[Telegram bot] that *has been used* to post YouTube channel updates to a group (Bash, NixOS, systemd).
-- #link("https://github.com/alurm/pisciners-faces")[Website] to display photos of students in my campus next to their nicknames (GNU Make, Bash, Go, Nix). *It has been used* to find nicknames of potential students by their photos and to provide feedback about them.
+- #link("https://github.com/alurm/pisciners-faces")[Website] to display photos of students in my campus next to their nicknames (GNU Make, Bash, Go, Nix). *It has been used* to find nicknames of potential students by their photos.
 - #link("https://github.com/alurm/irc")[IRC server] (C++). This was a group project *I have lead*.
 
 Have a *technology focused #link("https://t.me/alurman")[blog]*, *have given talks* at various hackerspaces (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2], #link("https://youtube.com/watch?v=noEbul27dHE")[3]).
 
 == Open Source Contributions
-
-Have contributed to:
 
 - #link("https://github.com/ki-editor/ki-editor")[`ki-editor`] text editor: #link("https://github.com/ki-editor/ki-editor/pull/665")[1], #link("https://github.com/ki-editor/ki-editor/pull/663")[2]
 - #link("https://github.com/talex5/cuekeeper")[CueKeeper] Get Things Done system: #link("https://github.com/talex5/cuekeeper/pull/45")[1]
