@@ -4,6 +4,8 @@
 
 = Alan Urmancheev — Software Engineer, Systems Programmer
 
+Software engineer, systems programmer, 42 school graduate, open source contributor, public speaker.
+
 #link("mailto:alan.urman@gmail.com")
 #link("https://github.com/alurm")[GitHub]
 #link("https://linkedin.com/in/alurm")[LinkedIn]
@@ -25,7 +27,7 @@
 // This links to GitHub so the link works in PDFs.
 === #link("https://42.fr")[42] (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[certificate]) #h(1fr) July 2021 — present
 
-Completed intensive, project-based curriculum in C, C++, algorithms, and systems programming, equivalent to 2 years of professional coding experience.
+Completed an intensive, project-based curriculum in C, C++, algorithms, and systems programming, equivalent to 2 years of professional coding experience.
 
 == Work Experience
 
