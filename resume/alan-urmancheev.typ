@@ -38,7 +38,7 @@ Completed an intensive, project-based curriculum in C, C++, algorithms, and syst
 
 == Projects
 
-- #link("https://github.com/alurm/json2dir")[`json2dir`]: JSON-to-directory converter], *which is used as a fast alternative to home-manager* for managing dotfiles (Rust, Nix).
+- #link("https://github.com/alurm/json2dir")[`json2dir`]: JSON-to-directory converter, *which is used as a fast alternative to home-manager* for managing dotfiles (Rust, Nix).
 - Cycle collecting *#link("https://github.com/alurm/alush/blob/main/gc/README.md")[garbage collector]* and #link("https://github.com/alurm/alush")[shell] with closures and maps (Rust, Nix).
 - #link("https://github.com/alurm/42-ping")[Implementation] of the ping *networking utility* (C23).
 - *#link("https://github.com/alurm/JSON")[Plugin] for the Acme text editor* for viewing JSON (Go).
