@@ -4,7 +4,7 @@
 
 = Alan Urmancheev — Software Engineer, Systems Programmer
 
-Summary: software engineer, systems programmer, 42 school graduate, open source contributor.
+Summary: software engineer, systems programmer, 42 school graduate, open source contributor, speaker.
 
 #link("mailto:alan.urman@gmail.com")
 #link("https://github.com/alurm")[GitHub]
@@ -20,7 +20,7 @@ Summary: software engineer, systems programmer, 42 school graduate, open source 
 
 *Languages*: English (advanced, C1), Russian (native).
 
-*Secondary skills*: C++, Haskell, Python, SQL, computer networking, system administration.
+*Secondary skills*: C++, Haskell, Python, SQL, computer networking, systems administration.
 
 == Education
 
@@ -38,7 +38,7 @@ Completed an intensive, project-based curriculum in C, C++, algorithms, and syst
 
 == Projects
 
-- #link("https://github.com/alurm/json2dir")[`json2dir`]: JSON-to-directory converter, *which is used as a fast alternative to home-manager* for managing dotfiles (Rust, Nix).
+- #link("https://github.com/alurm/json2dir")[`json2dir`]: JSON-to-directory converter, *which is used as a fast alternative to home-manager* for managing dotfiles (Rust, Nix, 100+ stars on GitHub).
 - Cycle collecting *#link("https://github.com/alurm/alush/blob/main/gc/README.md")[garbage collector]* and #link("https://github.com/alurm/alush")[shell] with closures and maps (Rust, Nix).
 - #link("https://github.com/alurm/42-ping")[Implementation] of the ping *networking utility* (C23).
 - *#link("https://github.com/alurm/JSON")[Plugin] for the Acme text editor* for viewing JSON (Go).
