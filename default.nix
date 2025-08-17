@@ -3,7 +3,6 @@
   blog,
   root,
   resume,
-  ft-yerevan-unofficial-guide,
 }:
 pkgs.stdenv.mkDerivation {
   name = "alurm.github.io";
@@ -36,9 +35,6 @@ pkgs.stdenv.mkDerivation {
     cp -r "${root}/." "$out"
     cp -r "${blog}/." "$out/blog"
     cp -r "${resume}/." "$out/resume"
-
-    mkdir "$out/42-yerevan-unofficial-guide"
-    cp -r "${ft-yerevan-unofficial-guide}/index.html" "$out/42-yerevan-unofficial-guide/index.html"
 
     mkdir "$out/extensions"
     mkdir "$out/extensions/remove-content-disposition"

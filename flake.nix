@@ -2,17 +2,12 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
-    ft-yerevan-unofficial-guide = {
-      url = "github:alurm/42-yerevan-unofficial-guide";
-      flake = false;
-    };
   };
 
   outputs =
     {
       nixpkgs,
       flake-utils,
-      ft-yerevan-unofficial-guide,
       self,
     }:
     flake-utils.lib.eachDefaultSystem (
@@ -31,10 +26,10 @@
               blog
               resume
               root
-              ft-yerevan-unofficial-guide
               ;
           };
         };
+
         devShells.default = pkgs.mkShell {
           inputsFrom = builtins.attrValues self.packages.${system};
         };

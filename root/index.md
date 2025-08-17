@@ -7,11 +7,7 @@ Looking for a job! Check out my [resume](resume/alan-urmancheev.pdf) ([HTML](res
 * [X](https://twitter.com/alurmanc)
 * [YouTube](https://youtube.com/@alurma)
 * [Telegram blog](https://t.me/alurman)
-
-### School 42
-
 * [Programming school 42's internal profile](https://profile.intra.42.fr/users/ghelman)
-* [A guide to 42 Yerevan programming school](42-yerevan-unofficial-guide/index.html)
 
 ## Blog
 
