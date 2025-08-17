@@ -31,16 +31,16 @@ Have a *technology focused blog* (#link("https://alurm.github.io/#blog")[on the 
 
 == Open source contributions
 
-- #link("https://github.com/ki-editor/ki-editor")[`ki-editor`] (text editor): #link("https://github.com/ki-editor/ki-editor/pull/665")[1], #link("https://github.com/ki-editor/ki-editor/pull/663")[2]
-- The #link("https://github.com/talex5/cuekeeper")[CueKeeper] (Get Things Done system): #link("https://github.com/talex5/cuekeeper/pull/45")[1]
-- #link("https://github.com/nixos/nix")[Nix] (package manager): #link("https://github.com/nixos/nix/pull/13525")[1]
-- #link("https://github.com/golang")[Go] (programming language): #link("https://github.com/golang/go/issues/62225")[1]
-- #link("https://github.com/dart-lang")[Dart] (programming language): #link("https://github.com/dart-lang/site-www/pull/4618")[1], #link("https://github.com/dart-lang/site-www/pull/5825")[2]
-- #link("https://github.com/nushell")[Nushell] (shell) #link("https://github.com/nushell/nushell.github.io/pull/835")[1]
-- #link("https://github.com/pallene-lang/pallene")[Pallene] (programming language): #link("https://github.com/pallene-lang/pallene/pull/570")[1]
-- #link("https://github.com/json-c/json-c")[`json-c`] (JSON library) #link("https://github.com/json-c/json-c/pull/858")[1]
-- #link("https://github.com/upspin/upspin")[Upspin] (naming system): #link("https://github.com/upspin/upspin/issues/663")[1]
-- #link("https://github.com/martanne/vis")[`vis`] (text editor): #link("https://github.com/martanne/vis/pull/1239")[1]
+- #link("https://github.com/ki-editor/ki-editor")[`ki-editor`], a text editor: #link("https://github.com/ki-editor/ki-editor/pull/665")[1], #link("https://github.com/ki-editor/ki-editor/pull/663")[2]
+- #link("https://github.com/talex5/cuekeeper")[CueKeeper], a Get Things Done system: #link("https://github.com/talex5/cuekeeper/pull/45")[1]
+- #link("https://github.com/nixos/nix")[Nix], a package manager: #link("https://github.com/nixos/nix/pull/13525")[1]
+- #link("https://github.com/golang")[Go], a programming language: #link("https://github.com/golang/go/issues/62225")[1]
+- #link("https://github.com/dart-lang")[Dart], a programming language: #link("https://github.com/dart-lang/site-www/pull/4618")[1], #link("https://github.com/dart-lang/site-www/pull/5825")[2]
+- #link("https://github.com/nushell")[Nushell], a shell: #link("https://github.com/nushell/nushell.github.io/pull/835")[1]
+- #link("https://github.com/pallene-lang/pallene")[Pallene], a programming language: #link("https://github.com/pallene-lang/pallene/pull/570")[1]
+- #link("https://github.com/json-c/json-c")[`json-c`], a JSON library: #link("https://github.com/json-c/json-c/pull/858")[1]
+- #link("https://github.com/upspin/upspin")[Upspin], a naming system: #link("https://github.com/upspin/upspin/issues/663")[1]
+- #link("https://github.com/martanne/vis")[`vis`], a text editor: #link("https://github.com/martanne/vis/pull/1239")[1]
 
 == Education
 
