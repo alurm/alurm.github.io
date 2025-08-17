@@ -1,15 +1,18 @@
-src:
+{
+  prefix,
+  title,
+}:
 {
   pandoc,
   lib,
   runCommand,
 }:
-runCommand "${builtins.baseNameOf (builtins.toString src)}.html" { } ''
+runCommand "${builtins.baseNameOf (builtins.toString prefix)}.html" { } ''
   cat << heredoc > "$out"
     ${import ../html-template.nix { inherit lib pandoc; } {
-      title = builtins.readFile "${src}/it.title";
+      inherit title;
       style = "../style.css";
-      post = "${src}/it.md";
+      post = "${./. + "/${prefix}.md"}";
     }}
   heredoc
 ''

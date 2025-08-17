@@ -1,8 +1,10 @@
 {
   pkgs,
+
   blog,
   root,
   resume,
+  extensions,
 }:
 pkgs.stdenv.mkDerivation {
   name = "alurm.github.io";
@@ -34,12 +36,8 @@ pkgs.stdenv.mkDerivation {
 
     cp -r "${root}/." "$out"
     cp -r "${blog}/." "$out/blog"
+    cp -r "${extensions}/." "$out/extensions"
     cp -r "${resume}/." "$out/resume"
-
-    mkdir "$out/extensions"
-    mkdir "$out/extensions/remove-content-disposition"
-
-    cp {.,"$out"}"/extensions/remove-content-disposition/extension.xpi"
 
     runHook postInstall
   '';

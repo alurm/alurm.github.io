@@ -20,12 +20,14 @@
           default = tree;
           blog = pkgs.callPackage ./blog { };
           resume = pkgs.callPackage ./resume { };
+          extensions = pkgs.callPackage ./extensions { };
           root = pkgs.callPackage ./root { };
           tree = pkgs.callPackage ./. {
             inherit
               blog
               resume
               root
+              extensions
               ;
           };
         };

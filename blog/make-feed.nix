@@ -15,19 +15,21 @@ lib: components-of-posts: ''
 
     ${builtins.concatStringsSep "" (
       map (
-        { date, rest }:
+        {
+          date,
+          rest,
+          title,
+        }:
         let
-          dir-name-of-post = builtins.concatStringsSep "-" [
+          prefix = builtins.concatStringsSep "-" [
             date
             rest
           ];
-          dir-of-post = ./. + ("/" + dir-name-of-post);
-          title = lib.escapeXML (builtins.readFile "${dir-of-post}/it.title");
-          url-of-post = "https://alurm.github.io/blog/${dir-name-of-post}.html";
+          url-of-post = "https://alurm.github.io/blog/${prefix}.html";
         in
         ''
           <entry>
-            <title>${title}</title>
+            <title>${lib.escapeXML title}</title>
             <updated>${date}T00:00:00Z</updated>
             <link href="${url-of-post}"/>
             <content src="${url-of-post}">

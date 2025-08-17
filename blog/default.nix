@@ -3,40 +3,42 @@
   linkFarmFromDrvs,
   runCommand,
   lib,
-  lndir,
+  pandoc,
 }:
 let
   # Newest should be last.
-  components-of-paths = [
+  metadatas = [
     {
       date = "2024-08-18";
       rest = "c-scripting-with-tcc-and-bash";
+      title = "C scripting with TCC and Bash";
     }
     {
       date = "2024-09-17";
       rest = "an-argument-for-having-trailing-slashes-in-canonical-directory-paths";
+      title = "An argument for having trailing slashes in canonical directory paths";
     }
     {
       date = "2025-08-07";
       rest = "first-class-lists-in-shells";
+      title = "More shell tricks: first class lists, jq, and the es shell";
     }
   ];
 
-  paths = map (
-    { date, rest }:
-    ./.
-    + (
-      "/"
-      + (builtins.concatStringsSep "-" [
-        date
-        rest
-      ])
-    )
-  ) components-of-paths;
+  makePost =
+    metadata:
+    callPackage (import ./make-post.nix ({
+      inherit (metadata) title;
+      prefix = lib.concatStringsSep "-" (
+        with metadata;
+        [
+          date
+          rest
+        ]
+      );
+    })) { };
 
-  makePost = path: callPackage (import ./make-post.nix path) { };
-
-  postsDrvs = map makePost paths;
+  postsDrvs = map makePost metadatas;
 
   posts = linkFarmFromDrvs "posts.blog.alurm.github.io" postsDrvs;
 in
@@ -44,7 +46,16 @@ in
 runCommand "blog.alurm.github.io" { } ''
   mkdir "$out"
   cd "$out"
-  ${lndir}/bin/lndir "${posts}"
 
-  cp ${builtins.toFile "feed.xml" (import ./make-feed.nix lib components-of-paths)} "$out/feed.xml"
+  cp "${posts}"/* "$out"
+
+  cp ${builtins.toFile "feed.xml" (import ./make-feed.nix lib metadatas)} "$out/feed.xml"
+
+  cat << heredoc > "$out/index.html"
+    ${import ../html-template.nix { inherit pandoc lib; } {
+      style = "../style.css";
+      post = ./index.md;
+      title = "Alan Urmancheev's blog";
+    }}
+  heredoc
 ''
