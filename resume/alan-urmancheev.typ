@@ -20,7 +20,7 @@
 
 *Programming languages*: Rust, C, Go.
 
-*Technologies*: Linux, Git, Docker, Nix, GNU Make, Bash, `jq`.
+*Technologies*: Linux, Git, Docker, Nix, GNU Make, Bash.
 
 *Languages*: advanced English, native Russian.
 
