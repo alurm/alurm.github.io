@@ -10,7 +10,7 @@ runCommand "root.alurm.github.io" { } ''
     ${import ../html-template.nix { inherit pandoc lib; } {
       style = "style.css";
       post = ./index.md;
-      title = "Alan Urmancheev: software engineer, systems programmer, open source contributor, public speaker";
+      title = "Alan Urmancheev: software engineer, systems programmer, open source contributor";
     }}
   heredoc
 ''
