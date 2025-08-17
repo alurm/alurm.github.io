@@ -10,7 +10,7 @@
 #show heading.where(level: 1): it => align(center, it)
 #show heading.where(level: 2): it => align(center, it)
 
-= Alan Urmancheev: software engineer, systems programmer, open source contributor, public speaker
+= Alan Urmancheev: software engineer, systems programmer, open source contributor
 
 #link("mailto:alan.urman@gmail.com")
 #link("https://github.com/alurm")[GitHub]
