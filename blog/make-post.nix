@@ -5,9 +5,9 @@
 {
   pandoc,
   lib,
-  runCommand,
+  runCommandLocal,
 }:
-runCommand "${builtins.baseNameOf (builtins.toString prefix)}.html" { } ''
+runCommandLocal "${builtins.baseNameOf (builtins.toString prefix)}.html" { } ''
   cat << heredoc > "$out"
     ${import ../html-template.nix { inherit lib pandoc; } {
       inherit title;

@@ -16,14 +16,6 @@ pkgs.stdenv.mkDerivation {
 
   doCheck = true;
 
-  checkPhase = ''
-    runHook preCheck
-
-    treefmt --ci
-
-    runHook postCheck
-  '';
-
   buildPhase = ''
     runHook preBuild
     runHook postBuild

@@ -1,10 +1,10 @@
 {
   lib,
 
-  runCommand,
+  runCommandLocal,
   pandoc,
 }:
-runCommand "extensions.alurm.github.io" { } ''
+runCommandLocal "extensions.alurm.github.io" { } ''
   mkdir "$out"
 
   mkdir "$out/remove-content-disposition"

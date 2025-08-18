@@ -1,16 +1,24 @@
-// #context {
-//   if target() == "html" {
-//     html.elem("head")[
-//       #html.elem("style", "* { font-size: 10 }")
-//     ]
-//   }
-// }
-
 #show link: it => underline(text(blue, it))
 #show heading.where(level: 1): it => align(center, it)
 #show heading.where(level: 2): it => align(center, it)
 
-= Alan Urmancheev: software engineer, systems programmer, open source contributor
+#context {
+  if target() == "html" {
+    html.elem(
+      "link",
+      attrs: (
+        rel: "stylesheet",
+        href: "../style.css",
+      ),
+    )
+    html.elem(
+      "title",
+      "Alan Urmancheev's CV",
+    )
+  }
+}
+
+= Alan Urmancheev: software engineer, systems programmer
 
 #link("mailto:alan.urman@gmail.com")
 #link("https://github.com/alurm")[GitHub]
@@ -22,7 +30,7 @@
 
 *Technologies*: Linux, Git, Docker, Nix, GNU Make, Bash.
 
-*Languages*: advanced English, native Russian.
+*Languages*: English, Russian.
 
 *Secondary skills*: C++, Haskell, SQL, computer networking, systems administration.
 
@@ -48,10 +56,6 @@
 
 `irc` is an implementation of the client-server part of the original IRC specification.
 
-== Public speaking
-
-Have a *technology focused blog* (#link("https://alurm.github.io/#blog")[web], #link("https://t.me/alurman")[Telegram]). *Have given public talks* (about Git, C (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2]), Nix (#link("https://youtube.com/watch?v=noEbul27dHE")[1]), and other topics).
-
 == Open source contributions
 
 #{
@@ -68,24 +72,28 @@ Have a *technology focused blog* (#link("https://alurm.github.io/#blog")[web], #
     [#link("https://github.com/martanne/vis")[`vis`] (#link("https://github.com/martanne/vis/pull/1239")[1])],
   )
 
-  // context {
-  //   if target() == "html" {
-  //     list(..content)
-  //   } else {
+  context {
+    if target() == "html" {
+      list(..content)
+    } else {
       grid(
         columns: (1fr, 1fr, 1fr, 1fr),
         gutter: 0.8em,
         ..content
       )
-  //   }
-  // }
+    }
+  }
 }
+
+== Public speaking
+
+Have a *technology focused blog* (#link("https://alurm.github.io/#blog")[web], #link("https://t.me/alurman")[Telegram]). *Have given public talks* (about Git, C (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2]), Nix (#link("https://youtube.com/watch?v=noEbul27dHE")[1]), and other topics).
 
 == Education
 
 // The certificate links to GitHub so the link works in PDF as well as in HTML form, since relative paths are unavailable in PDFs.
 
-=== #link("https://42.fr")[42, the educational institution] (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[completion certificate]): 2021 — 2024
+=== #link("https://42.fr")[42] (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[completion certificate]): 2021 — 2024
 
 Completed an intensive, project-based curriculum in C, C++, algorithms, and systems programming, equivalent to 2 years of professional coding experience.
 

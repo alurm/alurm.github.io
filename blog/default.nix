@@ -1,7 +1,7 @@
 {
   callPackage,
   linkFarmFromDrvs,
-  runCommand,
+  runCommandLocal,
   lib,
   pandoc,
 }:
@@ -43,7 +43,7 @@ let
   posts = linkFarmFromDrvs "posts.blog.alurm.github.io" postsDrvs;
 in
 # TODO: remove work duplication here.
-runCommand "blog.alurm.github.io" { } ''
+runCommandLocal "blog.alurm.github.io" { } ''
   mkdir "$out"
   cd "$out"
 
