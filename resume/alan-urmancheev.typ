@@ -24,11 +24,11 @@
 #link("https://github.com/alurm")[GitHub]
 #link("https://t.me/alurm")[Telegram]
 
-== Technical skills
+== Key skills
 
 *Programming languages*: Rust, C, Go.
 
-*Technologies*: Linux, Git, Docker, Nix, GNU Make, Bash.
+*Technologies*: Linux, Git, Docker, Nix, GNU Make, Bash, etc.
 
 *Languages*: English, Russian.
 
