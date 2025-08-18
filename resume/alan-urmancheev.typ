@@ -71,6 +71,7 @@
     [#link("https://github.com/upspin/upspin")[Upspin] (#link("https://github.com/upspin/upspin/issues/663")[1])],
     [#link("https://github.com/martanne/vis")[`vis`] (#link("https://github.com/martanne/vis/pull/1239")[1])],
     [#link("https://github.com/nixos/nixpkgs")[`nixpkgs`] (#link("https://github.com/NixOS/nixpkgs/pull/427734")[1])],
+    [#link("https://github.com/rust-lang/rust")[`rust`] (#link("https://github.com/rust-lang/rust/pull/145476")[1])],
   )
 
   context {
