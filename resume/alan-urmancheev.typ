@@ -20,23 +20,23 @@ Software engineer and open source contributor skilled in Rust, Nix, C, and Go. G
 
 == Personal projects
 
-=== #link("https://github.com/alurm/json2dir")[`json2dir`]: a JSON-to-directory converter, 100+ stars on GitHub (Rust, Nix) #h(1fr) 2025
+=== #link("https://github.com/alurm/json2dir")[`json2dir`]: a JSON-to-directory converter, 100+ stars on GitHub (Rust, Nix) (2025)
 
 `json2dir` is used as a *fast alternative to home-manager* for managing dotfiles.
 
-=== #link("https://github.com/alurm/alush")[`alush`]: a Unix shell with closures, hashmaps and a custom garbage collector (Rust) #h(1fr) 2025
+=== #link("https://github.com/alurm/alush")[`alush`]: a Unix shell with closures, hashmaps and a custom garbage collector (Rust) (2025)
 
 `alush` is a shell *capable of passing around structured data*, which is cumbersome is shells like Bash. A custom cycle collecting GC has been implemented.
 
-=== #link("https://github.com/alurm/ping")[`ping`]: an implementation of the ping networking utility (C, Nix) #h(1fr) 2024
+=== #link("https://github.com/alurm/ping")[`ping`]: an implementation of the ping networking utility (C, Nix) (2024)
 
 `ping` allows to send ICMP packets to *discover availability of internet hosts*.
 
-=== #link("https://github.com/alurm/JSON")[`JSON`]: a plugin for the Acme text editor for viewing JSON (Go) #h(1fr) 2023
+=== #link("https://github.com/alurm/JSON")[`JSON`]: a plugin for the Acme text editor for viewing JSON (Go) (2023)
 
 `JSON` represents JSON structures as interactive buffers, making in *easy to explore JSON* (#link("https://youtube.com/shorts/kqXfiNjZgaM")[video]).
 
-=== #link("https://github.com/alurm/irc")[`irc`]: an IRC server (C++) #h(1fr) 2023
+=== #link("https://github.com/alurm/irc")[`irc`]: an IRC server (C++) (2023)
 
 `irc` implements the client-server part of the IRC specification, making it *useful as an IRC server*.
 
@@ -68,7 +68,7 @@ Software engineer and open source contributor skilled in Rust, Nix, C, and Go. G
 
 == Work experience
 
-=== Software engineer at #link("https://inango.com")[Inango] #h(1fr) January 2023 — April 2023
+=== Software engineer at #link("https://inango.com")[Inango] (January 2023 — April 2023)
 
 - Wrote a C memory profiler utilizing Linux's `/proc/$pid/maps`. It has been used to *analyse memory usage patterns* in a service.
 - *Integrated TLS* between a company service and a MQTT broker using C, Go, and OpenSSL.
@@ -77,7 +77,7 @@ Software engineer and open source contributor skilled in Rust, Nix, C, and Go. G
 
 // The certificate links to GitHub so the link works in PDF as well as in HTML form, since relative paths are unavailable in PDFs.
 
-=== #link("https://42.fr")[42] programming school (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[completion certificate]) #h(1fr) July 2021 — May 2025
+=== #link("https://42.fr")[42] programming school (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[completion certificate]) (July 2021 — May 2025)
 
 Completed an intensive, project-based curriculum in C, C++, algorithms, and systems programming, equivalent to 2 years of professional coding experience.
 
