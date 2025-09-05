@@ -14,6 +14,7 @@ runCommand "resume.alurm.github.io" { } ''
     style = "style.css";
     content = ./cv.typ;
     format = "typst";
+    title = "Alan Urmancheev's CV";
     need-table-of-contents = false;
   }}
   heredoc

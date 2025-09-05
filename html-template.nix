@@ -11,7 +11,7 @@
 }:
 assert lib.assertMsg (lib.typeOf style == "string") "the stylesheet can't point to the Nix store";
 assert lib.assertMsg (
-  (!isNull title || need-table-of-contents) -> format == "markdown"
+  need-table-of-contents -> format == "markdown"
 ) "need-table-of-contents and title require markdown format";
 assert lib.assertMsg (
   need-table-of-contents -> !isNull title
