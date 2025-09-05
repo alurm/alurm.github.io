@@ -6,6 +6,7 @@
 runCommandLocal "root.alurm.github.io" { } ''
   mkdir "$out"
   cp ${./style.css} "$out/style.css"
+  cp ${./favicon.ico} "$out/favicon.ico"
   cat << heredoc > "$out/index.html"
     ${import ../html-template.nix { inherit pandoc lib; } {
       style = "style.css";
