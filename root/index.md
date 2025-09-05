@@ -1,4 +1,4 @@
-Software engineer, systems programmer, and open source contributor experienced in Rust, Nix, C, and Go. World-class [42.fr](https://42.fr) school alumni.
+Software engineer and open source contributor skilled in Rust, Nix, C, and Go. Graduate of the world-class [42.fr](https://42.fr) coding school.
 
 * [Email](mailto:alan.urman@gmail.com)
 * [X](https://x.com/alurmanc)
@@ -11,4 +11,4 @@ Check out my [GitHub](https://github.com/alurm) and my CV ([HTML](./resume/alan-
 
 ## [Blog](./blog/index.html)
 
-## [Web extensions](./extensions/index.html)
+<!-- ## [Web extensions](./extensions/index.html) -->
