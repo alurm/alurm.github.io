@@ -7,7 +7,7 @@ Software engineer and open source contributor skilled in Rust, Nix, C, and Go. G
 
 ## Hire me!
 
-Check out my [GitHub](https://github.com/alurm) and my CV ([HTML](./resume/alan-urmancheev.html), [PDF](./resume/alan-urmancheev.pdf))
+Check out my [GitHub](https://github.com/alurm) and my CV ([PDF](./resume/alan-urmancheev.pdf), [HTML](./resume/alan-urmancheev.html))
 
 ## [Blog](./blog/index.html)
 
