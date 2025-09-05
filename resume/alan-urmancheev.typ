@@ -4,9 +4,9 @@
 
 = Alan Urmancheev
 
-• Email: #link("mailto:alan.urman@gmail.com")
-• GitHub: #link("https://github.com/alurm")[github.com/alurm]
-• Website: #link("https://alurm.github.io")[alurm.github.io]
+Email: #link("mailto:alan.urman@gmail.com") •
+GitHub: #link("https://github.com/alurm")[github.com/alurm] •
+Website: #link("https://alurm.github.io")[alurm.github.io]
 
 Software engineer and open source contributor skilled in Rust, Nix, C, and Go. Graduate of the world-class 42.fr coding school.
 
