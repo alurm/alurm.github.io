@@ -2,22 +2,6 @@
 #show heading.where(level: 1): it => align(center, it)
 #show heading.where(level: 2): it => align(center, it)
 
-#context {
-  if target() == "html" {
-    html.elem(
-      "link",
-      attrs: (
-        rel: "stylesheet",
-        href: "../style.css",
-      ),
-    )
-    html.elem(
-      "title",
-      "Alan Urmancheev's CV",
-    )
-  }
-}
-
 = Alan Urmancheev: software engineer, systems programmer
 
 #link("mailto:alan.urman@gmail.com")
@@ -75,15 +59,12 @@
   )
 
   context {
-    if target() == "html" {
-      list(..content)
-    } else {
       grid(
         columns: (1fr, 1fr, 1fr, 1fr),
-        gutter: 0.8em,
+        inset: 5pt,
+        stroke: black,
         ..content
       )
-    }
   }
 }
 

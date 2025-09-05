@@ -49,7 +49,19 @@ a:not(:visited) {
 
 pre {
     overflow-x: scroll;
-    border: 1px solid light-dark(var(--white), var(--black));
+}
+
+pre, td {
+    border: 1px solid light-dark(var(--black), var(--white));
+}
+
+td {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+table {
+    border-collapse: collapse;
 }
 
 /* Feels weird for web pages, but ok for PDFs. */

@@ -10,6 +10,8 @@
   format ? "markdown",
 }:
 assert lib.assertMsg (lib.typeOf style == "string") "the stylesheet can't point to the Nix store";
+assert lib.assertMsg ((!isNull title || need-table-of-contents) -> format == "markdown") "need-table-of-contents and title require markdown format";
+assert lib.assertMsg (need-table-of-contents -> !isNull title) "need-table-of-contents requires a title to be set";
 ''
   <!doctype html>
   <html>
@@ -41,26 +43,34 @@ assert lib.assertMsg (lib.typeOf style == "string") "the stylesheet can't point 
     </head>
     <body>
       $(
-        {
-          ${
-            lib.optionalString (!isNull title) ''
-              printf '# %s\n' ${lib.escapeShellArg title}
+        ${
+          if format == "markdown" then
             ''
-          }
-          ${
-            assert lib.assertMsg (!(need-table-of-contents && isNull title))
-            "you specified need-table-of-contents, but not title, you probably need both";
-            lib.optionalString need-table-of-contents ''
-              printf '## Table of contents\n'
+              {
+                ${
+                  lib.optionalString (!isNull title) ''
+                    printf '# %s\n' ${lib.escapeShellArg title}
+                  ''
+                }
+                ${
+                  lib.optionalString need-table-of-contents ''
+                    printf '## Table of contents\n'
+                  ''
+                }
+                cat ${post} | ${pandoc}/bin/pandoc --from ${format} --to markdown \
+                  ${
+                    lib.optionalString need-table-of-contents
+                    "--toc --standalone"
+                  }
+              } |
+              ${pandoc}/bin/pandoc --from markdown
             ''
-          }
-          cat ${post} |
-          ${pandoc}/bin/pandoc --from ${format} --to markdown \
-            ${
-              lib.optionalString need-table-of-contents "--toc --standalone"
-            }
-        } |
-        ${pandoc}/bin/pandoc --from markdown
+          else
+            ''
+              cat ${post} |
+              ${pandoc}/bin/pandoc --from ${format}
+            ''
+        }
       )
     </body>
   </html>

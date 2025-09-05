@@ -1,3 +1,5 @@
+## The question
+
 I was writing some GNU make today and remembered an age old question: "Should canonical directory paths contain a trailing slash (as in `dir/`) or not (as in `dir`)?"
 
 I always thought that they shouldn't (so, `dir`).
@@ -12,7 +14,7 @@ Repeated slashes are ugly. To fix the ugliness in data, in the code either a spe
 
 Well, we replaced the "ugly data" problem with ugly code.
 
----
+## Conclusion
 
 So, perhaps canonical directory names should have a trailing slash in them, for simplicity of the general case.
 
