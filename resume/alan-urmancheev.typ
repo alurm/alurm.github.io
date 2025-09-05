@@ -8,7 +8,7 @@
 • GitHub: #link("https://github.com/alurm")[github.com/alurm]
 • Website: #link("https://alurm.github.io")[alurm.github.io]
 
-Software engineer, systems programmer, and open source contributor skilled in Rust, Nix, C, and Go. World-class 42.fr school alumni.
+Software engineer, systems programmer, and open source contributor skilled in Rust, Nix, C, and Go. Alumni of the world-class 42.fr programming school.
 
 == Technical skills
 
