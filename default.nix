@@ -18,7 +18,7 @@ runCommand "alurm.github.io" { } ''
   cp ${resume}/42-yerevan-certificate.pdf $out
 
   # Deprecated.
-  mkdir resume
-  ln -s ../cv.pdf resume/alan-urmancheev.pdf
-  ln -s ../cv.html resume/alan-urmancheev.html
+  mkdir $out/resume
+  ln -s ../cv.pdf $out/resume/alan-urmancheev.pdf
+  ln -s ../cv.html $out/resume/alan-urmancheev.html
 ''
