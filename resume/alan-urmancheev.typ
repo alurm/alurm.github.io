@@ -66,6 +66,13 @@ Software engineer, systems programmer, and open source contributor skilled in Ru
   )
 }
 
+== Work experience
+
+=== Software engineer at #link("https://inango.com")[Inango] #h(1fr) January 2023 — April 2023
+
+- Wrote a C memory profiler utilizing Linux's `/proc/$pid/maps`. It has been used to *analyse memory usage patterns* in a service.
+- *Integrated TLS* between a company service and a MQTT broker using C, Go, and OpenSSL.
+
 == Education
 
 // The certificate links to GitHub so the link works in PDF as well as in HTML form, since relative paths are unavailable in PDFs.
@@ -74,13 +81,6 @@ Software engineer, systems programmer, and open source contributor skilled in Ru
 
 Completed an intensive, project-based curriculum in C, C++, algorithms, and systems programming, equivalent to 2 years of professional coding experience.
 
-== Work experience
-
-=== Software engineer at #link("https://inango.com")[Inango] #h(1fr) January 2023 — April 2023
-
-- Wrote a C memory profiler utilizing Linux's `/proc/$pid/maps`. It has been used to *analyse memory usage patterns* in a service.
-- *Integrated TLS* between a company service and a MQTT broker using C, Go, and OpenSSL.
-
 == Public speaking
 
-Have a *technology focused blog* (#link("https://alurm.github.io/#blog")[web], #link("https://t.me/alurman")[Telegram]). *Have given public talks* (about Git, C (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2]), Nix (#link("https://youtube.com/watch?v=noEbul27dHE")[1]), and other topics).
+Have a *technology focused blog* (#link("https://alurm.github.io/blog")[web], #link("https://t.me/alurman")[Telegram]). *Have given public talks* about Git, C (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2]), Nix (#link("https://youtube.com/watch?v=noEbul27dHE")[1]), OOP, and other topics.
