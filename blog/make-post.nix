@@ -13,6 +13,7 @@ runCommandLocal "${builtins.baseNameOf (builtins.toString prefix)}.html" { } ''
       inherit title;
       style = "../style.css";
       post = "${./. + "/${prefix}.md"}";
+      need-table-of-contents = true;
     }}
   heredoc
 ''

@@ -18,6 +18,7 @@ runCommandLocal "extensions.alurm.github.io" { } ''
       style = "../style.css";
       post = ./index.md;
       title = "Alan Urmancheev's web extensions";
+      need-table-of-contents = false;
     }}
   heredoc
 ''

@@ -56,6 +56,7 @@ runCommandLocal "blog.alurm.github.io" { } ''
       style = "../style.css";
       post = ./index.md;
       title = "Alan Urmancheev's blog";
+      need-table-of-contents = false;
     }}
   heredoc
 ''

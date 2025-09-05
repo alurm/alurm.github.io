@@ -11,6 +11,7 @@ runCommandLocal "root.alurm.github.io" { } ''
       style = "style.css";
       post = ./index.md;
       title = "Alan Urmancheev: software engineer, open source contributor";
+      need-table-of-contents = false;
     }}
   heredoc
 ''
