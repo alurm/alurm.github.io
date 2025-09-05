@@ -4,7 +4,7 @@
 }:
 {
   style,
-  post,
+  content,
   need-table-of-contents,
   title ? null,
   format ? "markdown",
@@ -57,7 +57,7 @@ assert lib.assertMsg (need-table-of-contents -> !isNull title) "need-table-of-co
                     printf '## Table of contents\n'
                   ''
                 }
-                cat ${post} | ${pandoc}/bin/pandoc --from ${format} --to markdown \
+                cat ${content} | ${pandoc}/bin/pandoc --from ${format} --to markdown \
                   ${
                     lib.optionalString need-table-of-contents
                     "--toc --standalone"
@@ -67,7 +67,7 @@ assert lib.assertMsg (need-table-of-contents -> !isNull title) "need-table-of-co
             ''
           else
             ''
-              cat ${post} |
+              cat ${content} |
               ${pandoc}/bin/pandoc --from ${format}
             ''
         }

@@ -1,7 +1,7 @@
 {
   callPackage,
   linkFarmFromDrvs,
-  runCommandLocal,
+  runCommand,
   lib,
   pandoc,
 }:
@@ -43,7 +43,7 @@ let
   posts = linkFarmFromDrvs "posts.blog.alurm.github.io" postsDrvs;
 in
 # TODO: remove work duplication here.
-runCommandLocal "blog.alurm.github.io" { } ''
+runCommand "blog.alurm.github.io" { } ''
   mkdir "$out"
   cd "$out"
 
@@ -54,7 +54,7 @@ runCommandLocal "blog.alurm.github.io" { } ''
   cat << heredoc > "$out/index.html"
     ${import ../html-template.nix { inherit pandoc lib; } {
       style = "../style.css";
-      post = ./index.md;
+      content = ./index.md;
       title = "Alan Urmancheev's blog";
       need-table-of-contents = false;
     }}

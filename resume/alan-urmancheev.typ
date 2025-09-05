@@ -2,29 +2,29 @@
 #show heading.where(level: 1): it => align(center, it)
 #show heading.where(level: 2): it => align(center, it)
 
-= Alan Urmancheev: software engineer, systems programmer
+= Alan Urmancheev
 
-#link("mailto:alan.urman@gmail.com")
-#link("https://github.com/alurm")[GitHub]
-#link("https://t.me/alurm")[Telegram]
+• #link("mailto:alan.urman@gmail.com")
+• #link("https://github.com/alurm")[github.com/alurm]
+• #link("https://alurm.github.io")[alurm.github.io]
 
-== Key skills
+Software engineer, systems programmer, and open source contributor skilled in Rust, Nix, C, and Go. World-class 42.fr school alumni.
 
-*Programming languages*: Rust, C, Go.
+== Technical skills
 
-*Technologies*: Linux, Git, Docker, Nix, GNU Make, Bash, etc.
+*Primary languages*: Rust, Nix, C, Go.
 
-*Languages*: English, Russian.
+*Primary technologies*: Linux, Docker, GNU Make, Bash, Git.
 
-*Secondary skills*: C++, Haskell, SQL, computer networking, systems administration.
+*Secondary skills*: SQL, C++, JavaScript, Python, computer networking, system administration.
 
-== Notable projects
+== Personal projects
 
-=== #link("https://github.com/alurm/json2dir")[`json2dir`]: a JSON-to-directory converter (Rust, Nix, 100+ stars on GitHub)
+=== #link("https://github.com/alurm/json2dir")[`json2dir`]: a JSON-to-directory converter, 100+ stars on GitHub (Rust)
 
 `json2dir` is used as a *fast alternative to home-manager* for managing dotfiles.
 
-=== #link("https://github.com/alurm/alush")[`alush`]: a Unix shell with closures, hashmaps and a custom garbage collector (Rust, Nix)
+=== #link("https://github.com/alurm/alush")[`alush`]: a Unix shell with closures, hashmaps and a custom garbage collector (Rust)
 
 `alush` ia a Unix shell with closures and hashmaps, capable of passing around structured data, which is usually cumbersome in shells like Bash. A custom cycle collecting GC has been implemented.
 
@@ -32,7 +32,7 @@
 
 `JSON` is a plugin for the Acme text editor which represents JSON objects and arrays as individual windows, making in convenient to interactively explore large JSON values. #link("https://youtube.com/shorts/kqXfiNjZgaM")[Video].
 
-=== #link("https://github.com/alurm/42-ping")[`42-ping`]: an implementation of the ping networking utility (C23)
+=== #link("https://github.com/alurm/ping")[`ping`]: an implementation of the ping networking utility (C)
 
 `42-ping` is a tool that sends ICMP packets to report on availability of internet hosts.
 
@@ -58,31 +58,29 @@
     [#link("https://github.com/rust-lang/rust")[`rust`] (#link("https://github.com/rust-lang/rust/pull/145476")[1])],
   )
 
-  context {
-      grid(
-        columns: (1fr, 1fr, 1fr, 1fr),
-        inset: 5pt,
-        stroke: black,
-        ..content
-      )
-  }
+  grid(
+    columns: (1fr, 1fr, 1fr, 1fr, 1fr),
+    inset: 5pt,
+    stroke: black,
+    ..content
+  )
 }
-
-== Public speaking
-
-Have a *technology focused blog* (#link("https://alurm.github.io/#blog")[web], #link("https://t.me/alurman")[Telegram]). *Have given public talks* (about Git, C (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2]), Nix (#link("https://youtube.com/watch?v=noEbul27dHE")[1]), and other topics).
 
 == Education
 
 // The certificate links to GitHub so the link works in PDF as well as in HTML form, since relative paths are unavailable in PDFs.
 
-=== #link("https://42.fr")[42] (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[completion certificate]): 2021 — 2024
+=== #link("https://42.fr")[42] programming school (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[completion certificate]) #h(1fr) July 2021 — May 2025
 
 Completed an intensive, project-based curriculum in C, C++, algorithms, and systems programming, equivalent to 2 years of professional coding experience.
 
 == Work experience
 
-=== Software engineer at #link("https://inango.com")[Inango]: January 2023 — April 2023
+=== Software engineer at #link("https://inango.com")[Inango] #h(1fr) January 2023 — April 2023
 
 - Wrote a C memory profiler utilizing Linux's `/proc/$pid/maps`. It has been used to *analyse memory usage patterns* in a service.
 - *Integrated TLS* between a company service and a MQTT broker using C, Go, and OpenSSL.
+
+== Public speaking
+
+Have a *technology focused blog* (#link("https://alurm.github.io/#blog")[web], #link("https://t.me/alurman")[Telegram]). *Have given public talks* (about Git, C (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2]), Nix (#link("https://youtube.com/watch?v=noEbul27dHE")[1]), and other topics).

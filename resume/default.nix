@@ -2,9 +2,9 @@
   pandoc,
   typst,
   lib,
-  runCommandLocal,
+  runCommand,
 }:
-runCommandLocal "resume.alurm.github.io" { } ''
+runCommand "resume.alurm.github.io" { } ''
   mkdir "$out"
 
   ${typst}/bin/typst compile --features html ${./alan-urmancheev.typ} "$out/alan-urmancheev.pdf"
@@ -12,8 +12,7 @@ runCommandLocal "resume.alurm.github.io" { } ''
   cat << heredoc > "$out/alan-urmancheev.html"
   ${import ../html-template.nix { inherit lib pandoc; } {
     style = "../style.css";
-    # TODO: rename to "content".
-    post = ./alan-urmancheev.typ;
+    content = ./alan-urmancheev.typ;
     format = "typst";
     need-table-of-contents = false;
   }}
@@ -21,12 +20,3 @@ runCommandLocal "resume.alurm.github.io" { } ''
 
   cp ${./alan-urmancheev-42-yerevan-completion-certificate.pdf} "$out/alan-urmancheev-42-yerevan-completion-certificate.pdf"
 ''
-
-
-# cat << heredoc > "$out/alan-urmancheev.html"
-#   ${import ../html-template.nix { inherit lib pandoc; } {
-#     style = "../style.css";
-#     post = ./alan-urmancheev.typ;
-#     format = "typst";
-#   }}
-# heredoc
