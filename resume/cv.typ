@@ -4,39 +4,46 @@
 
 = Alan Urmancheev
 
-Email: #link("mailto:alan.urman@gmail.com") •
-GitHub: #link("https://github.com/alurm")[github.com/alurm] •
-Website: #link("https://alurm.github.io")[alurm.github.io]
+#(
+  link("mailto:alan.urman@gmail.com"),
+  link("https://github.com/alurm")[github.com/alurm],
+  link("https://linkedin.com/in/alurm")[linkedin.com/in/alurm],
+  link("https://alurm.github.io")[alurm.github.io],
+).join(" • ")
 
-Software engineer and open source contributor skilled in Rust, Nix, C, and Go. Graduate of the world-class 42.fr coding school.
+Software engineer and open source contributor. Graduate of the world-class 42.fr coding school.
 
 == Technical skills
 
-*Primary languages*: Rust, Nix, C, Go.
+*Primary programming languages*: Rust, Nix, C, Go.
 
 *Primary technologies*: Linux, Docker, GNU Make, Bash, Git.
 
-*Secondary skills*: SQL, C++, JavaScript, Python, computer networking, system administration.
+*Secondary skills*: SQL, C++, JavaScript, Python, NixOS, computer networking.
 
 == Personal projects
 
-=== #link("https://github.com/alurm/json2dir")[`json2dir`]: a JSON-to-directory converter, 100+ stars on GitHub (Rust, Nix) (2025)
+=== #link("https://github.com/alurm/json2dir")[`json2dir`]: JSON-to-directory converter, 100+ stars on GitHub (Rust, Nix) (2025)
 
 `json2dir` is used as a *fast alternative to home-manager* for managing dotfiles.
 
-=== #link("https://github.com/alurm/alush")[`alush`]: a Unix shell with closures, hashmaps and a custom garbage collector (Rust) (2025)
+=== #link("https://github.com/alurm/alush")[`alush`]: Unix shell with closures, hashmaps, and a cycle collecting GC (Rust) (2025)
 
-`alush` is a shell *capable of passing around structured data*, which is cumbersome is shells like Bash. A custom cycle collecting GC has been implemented.
+`alush` is a shell that *supports structured data natively*, which is lacking is shells like Bash.
 
-=== #link("https://github.com/alurm/ping")[`ping`]: an implementation of the ping networking utility (C, Nix) (2024)
+=== #link("https://github.com/alurm/ping")[`ping`]: implementation of ping networking utility (C, Nix) (2024)
 
-`ping` allows to send ICMP packets to *discover availability of internet hosts*.
+`ping` allows sending *ICMP packets* to internet hosts to discover their availability.
 
-=== #link("https://github.com/alurm/JSON")[`JSON`]: a plugin for the Acme text editor for viewing JSON (Go) (2023)
+=== #link("https://github.com/alurm/tsoping")[`tsoping`]: YouTube channel update Telegram notifier, 10+ stars on GitHub (Bash, Nix) (2024)
+
+`tsoping` is a Telegram bot that posts a message to a group every time a channel posts on YouTube.
+
+=== #link("https://github.com/alurm/JSON")[`JSON`]: plugin for Acme text editor for viewing JSON (Go) (2023)
 
 `JSON` represents JSON structures as interactive buffers, making in *easy to explore JSON* (#link("https://youtube.com/shorts/kqXfiNjZgaM")[video]).
 
-=== #link("https://github.com/alurm/irc")[`irc`]: an IRC server (C++) (2023)
+=== #link("https://github.com/alurm/irc")[`irc`]: IRC server (C++) (2023)
 
 `irc` implements the client-server part of the IRC specification, making it *useful as an IRC server*.
 
@@ -83,4 +90,4 @@ Completed an intensive, project-based curriculum in C, C++, algorithms, and syst
 
 == Public speaking
 
-Have a *technology focused blog* (#link("https://alurm.github.io/blog")[web], #link("https://t.me/alurman")[Telegram]). *Have given public talks* about Git, C (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2]), Nix (#link("https://youtube.com/watch?v=noEbul27dHE")[1]), OOP, and other topics.
+Have a *technology focused blog* (#link("https://alurm.github.io/blog")[web], #link("https://t.me/alurman")[Telegram]). Have given talks about *Git, C (#link("https://youtube.com/watch?v=BzqpjE7lgxw")[1], #link("https://youtube.com/watch?v=TJBGWVVmSNE")[2]), Nix (#link("https://youtube.com/watch?v=noEbul27dHE")[1]), OOP*, and other topics.
