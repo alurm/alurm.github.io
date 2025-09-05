@@ -75,9 +75,9 @@ Software engineer and open source contributor skilled in Rust, Nix, C, and Go. G
 
 == Education
 
-// The certificate links to GitHub so the link works in PDF as well as in HTML form, since relative paths are unavailable in PDFs.
+// The certificate links to the absolute path on the website so the link works in PDF as well as in HTML form, since relative paths are unavailable in PDFs.
 
-=== #link("https://42.fr")[42] programming school (#link("https://raw.githubusercontent.com/alurm/alurm.github.io/refs/heads/main/resume/alan-urmancheev-42-yerevan-completion-certificate.pdf")[completion certificate]) (July 2021 — May 2025)
+=== #link("https://42.fr")[42] programming school (#link("https://alurm.github.io/42-yerevan-certificate.pdf")[certificate]) (July 2021 — May 2025)
 
 Completed an intensive, project-based curriculum in C, C++, algorithms, and systems programming, equivalent to 2 years of professional coding experience.
 

@@ -53,9 +53,6 @@ pre {
 
 pre, td {
     border: 1px solid light-dark(var(--black), var(--white));
-}
-
-td {
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }

@@ -10,7 +10,7 @@ runCommand "root.alurm.github.io" { } ''
   cat << heredoc > "$out/index.html"
     ${import ../html-template.nix { inherit pandoc lib; } {
       style = "style.css";
-      content = "${./index.md} <(cat ${../blog/index.md} | sed 's:feed\.xml:blog/&:')";
+      content = "${./index.md} <(cat ${../blog/index.md} | sed 's:\./:./blog/:')";
       title = "Alan Urmancheev";
       need-table-of-contents = false;
     }}

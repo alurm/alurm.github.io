@@ -1,40 +1,24 @@
 {
-  pkgs,
-
   blog,
   root,
   resume,
   extensions,
+
+  runCommand,
 }:
-pkgs.stdenv.mkDerivation {
-  name = "alurm.github.io";
-  src = builtins.path { path = ./.; };
-  nativeBuildInputs = with pkgs; [
-    treefmt
-    nixfmt-rfc-style
-  ];
+runCommand "alurm.github.io" { } ''
+  mkdir "$out"
 
-  doCheck = true;
+  cp -r "${root}/." "$out"
+  cp -r "${blog}/." "$out/blog"
+  cp -r "${extensions}/." "$out/extensions"
 
-  buildPhase = ''
-    runHook preBuild
-    runHook postBuild
-  '';
+  cp ${resume}/cv.html $out
+  cp ${resume}/cv.pdf $out
+  cp ${resume}/42-yerevan-certificate.pdf $out
 
-  installPhase = ''
-    runHook preInstall
-
-    mkdir "$out"
-
-    cp -r "${root}/." "$out"
-    cp -r "${blog}/." "$out/blog"
-    cp -r "${extensions}/." "$out/extensions"
-
-    cp -r "${resume}/." "$out/resume"
-
-    ln -s resume/alan-urmancheev.html "$out/cv.html"
-    ln -s resume/alan-urmancheev.pdf "$out/cv.pdf"
-
-    runHook postInstall
-  '';
-}
+  # Deprecated.
+  mkdir resume
+  ln -s ../cv.pdf resume/alan-urmancheev.pdf
+  ln -s ../cv.html resume/alan-urmancheev.html
+''

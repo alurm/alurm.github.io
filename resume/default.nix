@@ -7,16 +7,16 @@
 runCommand "resume.alurm.github.io" { } ''
   mkdir "$out"
 
-  ${typst}/bin/typst compile --features html ${./alan-urmancheev.typ} "$out/alan-urmancheev.pdf"
+  ${typst}/bin/typst compile --features html ${./cv.typ} "$out/cv.pdf"
 
-  cat << heredoc > "$out/alan-urmancheev.html"
+  cat << heredoc > "$out/cv.html"
   ${import ../html-template.nix { inherit lib pandoc; } {
-    style = "../style.css";
-    content = ./alan-urmancheev.typ;
+    style = "style.css";
+    content = ./cv.typ;
     format = "typst";
     need-table-of-contents = false;
   }}
   heredoc
 
-  cp ${./alan-urmancheev-42-yerevan-completion-certificate.pdf} "$out/alan-urmancheev-42-yerevan-completion-certificate.pdf"
+  cp ${./42-yerevan-certificate.pdf} "$out/42-yerevan-certificate.pdf"
 ''
