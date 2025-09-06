@@ -1,13 +1,16 @@
-Software engineer and open source contributor skilled in Rust, Nix, C, and Go. Graduate of the world-class [42.fr](https://42.fr) coding school.
+[Email](mailto:alan.urman@gmail.com) •
+[GitHub](https://github.com/alurm) •
+[YouTube](https://youtube.com/@alurma) •
+[X](https://x.com/alurmanc) •
+[Telegram](https://t.me/alurm) •
+[LinkedIn](https://linkedin.com/in/alurm)
 
-* [Email](mailto:alan.urman@gmail.com)
-* [X](https://x.com/alurmanc)
-* [YouTube](https://youtube.com/@alurma)
-* [Telegram](https://t.me/alurm)
+Rust, Nix, C, and Go developer and open source contributor. Graduate of the world-class [42.fr](https://42.fr) coding school.
 
-## Hire me!
+## CV
 
-Check out my [GitHub](https://github.com/alurm) and my CV ([PDF](cv.pdf), [HTML](cv.html))
+* [PDF](cv.pdf)
+* [HTML](cv.html)
 
 ## [Blog](./blog/index.html)
 
