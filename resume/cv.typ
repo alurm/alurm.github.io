@@ -66,7 +66,7 @@ Software engineer. Open source contributor. Graduate of the world-class 42.fr co
   )
 
   grid(
-    columns: (1fr, 1fr, 1fr, 1fr, 1fr),
+    columns: (1fr, 1fr, 1fr, 1fr),
     inset: 5pt,
     stroke: black,
     ..content
