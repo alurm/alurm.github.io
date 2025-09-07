@@ -11,7 +11,7 @@
   link("https://alurm.github.io")[alurm.github.io],
 ).join(" • ")
 
-Software engineer and open source contributor. Graduate of the world-class 42.fr coding school.
+Software engineer. Open source contributor. Graduate of the world-class 42.fr coding school.
 
 == Technical skills
 
