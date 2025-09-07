@@ -19,7 +19,7 @@ Software engineer. Open source contributor. Graduate of the world-class 42.fr co
 
 *Primary technologies*: Linux, Docker, GNU Make, Bash, Git.
 
-*Secondary skills*: SQL, C++, JavaScript, Python, NixOS, computer networking.
+*Secondary skills*: SQL, C++, JavaScript, Python, Haskell, NixOS, computer networking.
 
 == Personal projects
 
