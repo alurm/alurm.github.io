@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Zix</title>
+  <meta charset="utf-8">
+  <script type="module" src="browser.js" async></script>
+  <style>
+    textarea {
+      width: 100%;
+      field-sizing: content;
+      min-height: 3rem;
+      resize: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1><a href="https://github.com/alurm/zix">Zix</a> interpreter</h1>
+
+  <ul>
+    <li>
+      Toggle visibility of
+      <button onclick="window.inputTextArea.hidden ^= 1">input</button>,
+      <button onclick="window.outputTextArea.hidden ^= 1">output</button> or
+      <button onclick="window.exampleTextArea.hidden ^= 1">example</button>.
+    </li>
+    <li><button onclick="window.zix.interpret()">Interpret</button> input.</li>
+    <!-- <li><button onclick="window.zix.reset()">Reset</button> interpreter state.</li> -->
+  </ul>
+
+  Hint: to get help, type <code>help</code>, followed by a newline, and interpret.
+
+  <h2>Input</h2>
+
+  <textarea id="inputTextArea"></textarea>
+
+  <h2>Output</h2>
+
+  <textarea id="outputTextArea"></textarea>
+
+  <h2>Example you can copy</h2>
+
+  <textarea id="exampleTextArea">
+let make-counter (
+	let count 0
+	<= (
+		set count $(add $count 1)
+		get count
+	)
+)
+
+# This variable will be saved in the environment after interpreting this block.
+global counter $(make-counter)
+
+echo $(counter)
+echo $(counter)
+</textarea>
+</body>
+
+</html>

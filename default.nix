@@ -21,4 +21,7 @@ runCommand "alurm.github.io" { } ''
   mkdir $out/resume
   ln -s ../cv.pdf $out/resume/alan-urmancheev.pdf
   ln -s ../cv.html $out/resume/alan-urmancheev.html
+
+  # Zix.
+  cp -r ${./zix} $out/zix
 ''
