@@ -5,12 +5,9 @@
 [Telegram](https://t.me/alurm) •
 [LinkedIn](https://linkedin.com/in/alurm)
 
-Rust, Nix, C, and Go developer. Open source contributor. Graduate of the world-class [42.fr](https://42.fr) coding school.
+Rust, Nix, C, and Go developer. Open source contributor. Systems programmer. [42.fr](https://42.fr) programming school graduate.
 
-## CV
-
-* [PDF](cv.pdf)
-* [HTML](cv.html)
+## [CV](cv.pdf)
 
 ## [Blog](./blog/index.html)
 
