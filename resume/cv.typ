@@ -22,6 +22,8 @@
 
 #align(center)[English: C1. Russian: native.]
 
+#align(center)[Authorized to work in Spain.]
+
 = Technical strengths
 
 *Primary skills*: Rust, C, Go, Git, Linux, Nix/NixOS, Bash, GNU Make.
