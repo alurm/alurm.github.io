@@ -1,8 +1,8 @@
-#show title: it => align(center, upper(it))
+#show title: it => align(center, it)
 #show heading.where(level: 1): it => {
-  align(center, upper(it))
-  // v(-0.8em)
-  // line(length: 100%, stroke: (thickness: 0.6pt))
+  it
+  v(-1em)
+  line(length: 100%, stroke: (thickness: 0.6pt))
 }
 #show link: it => underline(text(blue, it))
 
@@ -18,11 +18,16 @@
   ).join(" • "),
 )
 
-#align(center)[Software engineer, open source maintainer, systems programmer.]
+#align(
+  center,
+  (
+    [English: C1],
+    [Russian: native],
+    [Authorized to work in Spain],
+  ).join(" • "),
+)
 
-#align(center)[English: C1. Russian: native.]
-
-#align(center)[Authorized to work in Spain.]
+#align(center)[Software engineer, open source maintainer. Systems programming, developer tools, Unix.]
 
 = Technical strengths
 
@@ -32,7 +37,7 @@
 
 = Software projects
 
-== #link("https://github.com/alurm/json2dir")[`json2dir`]: a JSON to directory converter in Rust, 100+ stars #h(1fr) 2025
+== #link("https://github.com/alurm/json2dir")[`json2dir`]: a JSON to directory converter in Rust, 100+ stars #h(1fr) 2025—2026
 
 Created an alternative to Nix's `home-manager` user environment manager that doesn't require the Nix builder. Developed a format for representing directory trees in JSON and an evaluator for it.
 
@@ -46,18 +51,18 @@ Developed and deployed a bot serving 100+ notifications over 1+ year of uptime.
 
 == #link("https://github.com/alurm/ping")[`ping`]: ICMP echo networking utility in C #h(1fr) 2024
 
-Implemented checksumming, raw socket manipulation, IPv4 header dumping, packet parsing, achieving compatibility with standard ping utilities.
+Implemented checksumming, raw socket manipulation, IPv4 header dumping, packet parsing.
 
 == #link("https://github.com/alurm/JSON")[`JSON`]: a JSON viewer plugin for Acme editor in Go #h(1fr) 2023
 
-Built an extension for Acme editor simplifying navigation of complex JSON structures. #link("https://youtube.com/watch?v=kqXfiNjZgaM")[Video].
+Built an extension for Acme editor simplifying navigation of complex JSON structures. #link("https://youtube.com/watch?v=kqXfiNjZgaM")[Demo link].
 
 = Employment history
 
 == SWE at #link("https://inango.com")[Inango] (concurrent with #link("https://42.fr")[42.fr]) #h(1fr) January 2023—April 2023
 
 - Wrote a memory profiler based on `/proc/$pid/maps` in C, which has been used to analyze and optimize memory usage patterns of company's services.
-- Secured company's service by implementing Transport Layer Security (TLS) using C, Go, MQTT, and OpenSSL.
+- Secured company's service by integrating TLS using C, Go, MQTT, and OpenSSL.
 
 = Education
 
