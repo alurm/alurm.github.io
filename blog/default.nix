@@ -5,17 +5,12 @@
   lib,
   pandoc,
 }: let
-  # Newest should be last.
+  # Newest should be first.
   metadatas = [
     {
-      date = "2024-08-18";
-      rest = "c-scripting-with-tcc-and-bash";
-      title = "C scripting with TCC and Bash";
-    }
-    {
-      date = "2024-09-17";
-      rest = "an-argument-for-having-trailing-slashes-in-canonical-directory-paths";
-      title = "An argument for having trailing slashes in canonical directory paths";
+      date = "2026-06-17";
+      rest = "generic-dynamic-array-in-c-with-no-capacity";
+      title = "A generic dynamic array in C that stores no capacity and needs no struct";
     }
     {
       date = "2025-08-07";
@@ -23,9 +18,14 @@
       title = "More shell tricks: first class lists, jq, and the es shell";
     }
     {
-      date = "2026-06-17";
-      rest = "generic-dynamic-array-in-c-with-no-capacity";
-      title = "A generic dynamic array in C that stores no capacity and needs no struct";
+      date = "2024-09-17";
+      rest = "an-argument-for-having-trailing-slashes-in-canonical-directory-paths";
+      title = "An argument for having trailing slashes in canonical directory paths";
+    }
+    {
+      date = "2024-08-18";
+      rest = "c-scripting-with-tcc-and-bash";
+      title = "C scripting with TCC and Bash";
     }
   ];
 

@@ -10,34 +10,33 @@ lib: components-of-posts: ''
     </author>
 
     <updated>
-      ${((it: builtins.elemAt it (builtins.length it - 1)) components-of-posts).date}T00:00:000Z
+      ${((it: builtins.elemAt it 0) components-of-posts).date}T00:00:000Z
     </updated>
 
     ${builtins.concatStringsSep "" (
-      map (
-        {
-          date,
-          rest,
-          title,
-        }:
-        let
-          prefix = builtins.concatStringsSep "-" [
-            date
-            rest
-          ];
-          url-of-post = "https://alurm.github.io/blog/${prefix}.html";
-        in
-        ''
-          <entry>
-            <title>${lib.escapeXML title}</title>
-            <updated>${date}T00:00:00Z</updated>
-            <link href="${url-of-post}"/>
-            <content src="${url-of-post}">
-            </content>
-          </entry>
-        ''
-      ) components-of-posts
-    )}
+    map (
+      {
+        date,
+        rest,
+        title,
+      }: let
+        prefix = builtins.concatStringsSep "-" [
+          date
+          rest
+        ];
+        url-of-post = "https://alurm.github.io/blog/${prefix}.html";
+      in ''
+        <entry>
+          <title>${lib.escapeXML title}</title>
+          <updated>${date}T00:00:00Z</updated>
+          <link href="${url-of-post}"/>
+          <content src="${url-of-post}">
+          </content>
+        </entry>
+      ''
+    )
+    components-of-posts
+  )}
 
   </feed>
 ''
