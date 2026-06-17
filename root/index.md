@@ -9,6 +9,6 @@ Rust, Nix, C, and Go developer. Open source contributor. Systems programmer. [42
 
 ## [CV](cv.pdf)
 
-## [Blog](./blog/index.html)
+## Blog posts
 
 <!-- ## [Web extensions](./extensions/index.html) -->

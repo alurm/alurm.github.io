@@ -21,7 +21,7 @@ assert lib.assertMsg (
       <link
         rel="alternate"
         type="application/atom+xml"
-        title="Atom feed for Alan Urmancheev's blog"
+        title="Feed for Alan Urmancheev's blog"
       />
       <link rel="stylesheet" href="${style}"/>
       <meta name="viewport" content="width=device-width"/>

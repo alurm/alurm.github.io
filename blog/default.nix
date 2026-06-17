@@ -4,8 +4,7 @@
   runCommand,
   lib,
   pandoc,
-}:
-let
+}: let
   # Newest should be last.
   metadatas = [
     {
@@ -23,40 +22,43 @@ let
       rest = "first-class-lists-in-shells";
       title = "More shell tricks: first class lists, jq, and the es shell";
     }
+    {
+      date = "2026-06-17";
+      rest = "generic-dynamic-array-in-c-with-no-capacity";
+      title = "A generic dynamic array in C that stores no capacity and needs no struct";
+    }
   ];
 
-  makePost =
-    metadata:
-    callPackage (import ./make-post.nix ({
+  makePost = metadata:
+    callPackage (import ./make-post.nix {
       inherit (metadata) title;
       prefix = lib.concatStringsSep "-" (
-        with metadata;
-        [
+        with metadata; [
           date
           rest
         ]
       );
-    })) { };
+    }) {};
 
   postsDrvs = map makePost metadatas;
 
   posts = linkFarmFromDrvs "posts.blog.alurm.github.io" postsDrvs;
 in
-# TODO: remove work duplication here.
-runCommand "blog.alurm.github.io" { } ''
-  mkdir "$out"
-  cd "$out"
+  # TODO: remove work duplication here.
+  runCommand "blog.alurm.github.io" {} ''
+    mkdir "$out"
+    cd "$out"
 
-  cp "${posts}"/* "$out"
+    cp "${posts}"/* "$out"
 
-  cp ${builtins.toFile "feed.xml" (import ./make-feed.nix lib metadatas)} "$out/feed.xml"
+    cp ${builtins.toFile "feed.xml" (import ./make-feed.nix lib metadatas)} "$out/feed.xml"
 
-  cat << heredoc > "$out/index.html"
-    ${import ../html-template.nix { inherit pandoc lib; } {
+    cat << heredoc > "$out/index.html"
+      ${import ../html-template.nix {inherit pandoc lib;} {
       style = "../style.css";
       content = ./index.md;
       title = "Alan Urmancheev's blog";
       need-table-of-contents = false;
     }}
-  heredoc
-''
+    heredoc
+  ''
