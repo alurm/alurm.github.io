@@ -8,6 +8,11 @@
   # Newest should be first.
   metadatas = [
     {
+      date = "2026-06-26";
+      rest = "tacosprint";
+      title = "TacoSprint 2026: making Nix more relocatable, fixing shebangs and sending my first kernel patch";
+    }
+    {
       date = "2026-06-17";
       rest = "generic-dynamic-array-in-c-with-no-capacity";
       title = "A generic dynamic array in C that stores no capacity and needs no struct";
@@ -50,6 +55,9 @@ in
     cd "$out"
 
     cp "${posts}"/* "$out"
+
+    # Assets.
+    cp ${./2026-06-26-attention-nix-and-tacos-is-all-you-need.pdf} "$out/2026-06-26-attention-nix-and-tacos-is-all-you-need.pdf"
 
     cp ${builtins.toFile "feed.xml" (import ./make-feed.nix lib metadatas)} "$out/feed.xml"
 

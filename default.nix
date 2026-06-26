@@ -10,6 +10,7 @@ runCommand "alurm.github.io" {} ''
 
   cp -r ${root}/. $out
   cp -r ${blog}/. $out/blog
+
   cp -r ${extensions}/. $out/extensions
 
   cp ${resume}/cv.pdf $out

@@ -2,6 +2,7 @@
 
 ### 2026
 
+- **[TacoSprint 2026: making Nix more relocatable, fixing shebangs and sending my first kernel patch](./2026-06-26-tacosprint.html)**
 - [A generic dynamic array in C that stores no capacity and needs no struct](./2026-06-17-generic-dynamic-array-in-c-with-no-capacity.html)
 
 ### 2025

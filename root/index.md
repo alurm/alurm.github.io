@@ -7,8 +7,8 @@
 
 Rust, Nix, C, and Go developer. Open source contributor. Systems programmer. [42.fr](https://42.fr) programming school graduate.
 
-## [CV](cv.pdf)
+## [Résumé (CV)](cv.pdf)
 
-## Blog posts
+## Blog
 
 <!-- ## [Web extensions](./extensions/index.html) -->
