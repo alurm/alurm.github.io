@@ -69,6 +69,6 @@ Overall my experience has been very positive and I would do it again :)
 
 ## The paper "Attention, Nix and Tacos is all you need"
 
-Finally, Farid and I worked on this paper to summarize what has been done during the sprint. LLM-assisted coding has been performed during the sprint, hence the name of the paper (a play on "Attention Is All You Need"). It's available below:
+Finally, Farid and I worked on this paper to summarize what has been done during the sprint. LLM-assisted coding has been performed during the sprint, hence the name of the paper (a play on "Attention Is All You Need"). It's available below (or via [this link](2026-06-26-attention-nix-and-tacos-is-all-you-need.pdf)):
 
 <embed src="2026-06-26-attention-nix-and-tacos-is-all-you-need.pdf" type="application/pdf" width="100%" height="1000px">
