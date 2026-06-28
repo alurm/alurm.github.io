@@ -76,6 +76,7 @@ Completed an intensive, project-based curriculum in C, C++, algorithms, and syst
 
 #{
   let content = (
+    [• Linux (#link("https://lore.kernel.org/all/20260623052322.74711-1-alan.urman@gmail.com/T/#u")[doc fix])],
     [• #link("https://github.com/ki-editor/ki-editor")[Ki Editor] (#link("https://github.com/ki-editor/ki-editor/pull/665")[feature], #link("https://github.com/ki-editor/ki-editor/pull/663")[doc fix])],
     [• #link("https://github.com/talex5/cuekeeper")[CueKeeper] (#link("https://github.com/talex5/cuekeeper/pull/45")[bug fix])],
     [• #link("https://github.com/rust-lang/rust")[Rust] (#link("https://github.com/rust-lang/rust/pull/145476")[doc fix])],
